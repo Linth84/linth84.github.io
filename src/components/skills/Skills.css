@@ -1,0 +1,980 @@
+/* =========================================================
+   SKILLS
+   ========================================================= */
+
+.skills {
+  position: relative;
+  min-height: 100vh;
+  overflow: visible;
+
+  padding:
+    120px 6vw 110px;
+
+  color: #f4f7fb;
+
+  background:
+    radial-gradient(
+      circle at 78% 36%,
+      rgba(0, 157, 255, 0.065),
+      transparent 31%
+    ),
+    radial-gradient(
+      circle at 18% 68%,
+      rgba(70, 90, 255, 0.035),
+      transparent 28%
+    ),
+    #03070c;
+
+  isolation: isolate;
+}
+
+
+/* =========================================================
+   STAR FIELD
+   ========================================================= */
+
+.skills::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  z-index: -2;
+
+  pointer-events: none;
+
+  background:
+    radial-gradient(circle at 8% 20%, rgba(255, 255, 255, 0.62) 0 1px, transparent 1.5px),
+    radial-gradient(circle at 21% 46%, rgba(141, 211, 255, 0.48) 0 1px, transparent 1.5px),
+    radial-gradient(circle at 34% 13%, rgba(255, 255, 255, 0.42) 0 1px, transparent 1.5px),
+    radial-gradient(circle at 47% 78%, rgba(141, 211, 255, 0.46) 0 1px, transparent 1.5px),
+    radial-gradient(circle at 63% 24%, rgba(255, 255, 255, 0.46) 0 1px, transparent 1.5px),
+    radial-gradient(circle at 79% 58%, rgba(141, 211, 255, 0.46) 0 1px, transparent 1.5px),
+    radial-gradient(circle at 92% 18%, rgba(255, 255, 255, 0.4) 0 1px, transparent 1.5px);
+
+  background-size:
+    280px 280px,
+    350px 350px,
+    410px 410px,
+    480px 480px,
+    550px 550px,
+    640px 640px,
+    760px 760px;
+
+  opacity: 0.3;
+}
+
+
+/* =========================================================
+   TOP DIVIDER
+   ========================================================= */
+
+.skills::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 6vw;
+  right: 6vw;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(105, 216, 255, 0.3),
+      transparent
+    );
+}
+
+
+/* =========================================================
+   SECTION HEADER
+   ========================================================= */
+
+.skills-heading {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1500px;
+
+  margin:
+    0 auto 70px;
+
+  display: flex;
+  justify-content: space-between;
+
+  color: #48637c;
+
+  font-family: monospace;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.skills-intro {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1400px;
+
+  margin:
+    0 auto 70px;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(420px, 1.2fr)
+    minmax(300px, 0.8fr);
+
+  align-items: end;
+
+  gap:
+    clamp(50px, 8vw, 120px);
+}
+
+
+.skills-eyebrow {
+  margin:
+    0 0 20px;
+
+  color: #69d8ff;
+
+  font-family: monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+}
+
+
+.skills-intro h2 {
+  margin: 0;
+
+  max-width: 900px;
+
+  display: flex;
+  flex-direction: column;
+
+  color: #f4f7fb;
+
+  font-size:
+    clamp(58px, 6vw, 106px);
+
+  font-weight: 800;
+
+  line-height: 0.92;
+
+  letter-spacing: -0.06em;
+
+  text-shadow:
+    0 0 35px rgba(50, 160, 255, 0.07);
+}
+
+
+.skills-intro h2 span {
+  color: transparent;
+
+  -webkit-text-stroke:
+    1px rgba(210, 235, 255, 0.66);
+
+  text-shadow:
+    0 0 18px rgba(60, 180, 255, 0.12),
+    0 0 38px rgba(30, 140, 255, 0.07);
+}
+
+
+.skills-description {
+  margin: 0;
+
+  max-width: 520px;
+
+  color: #899daf;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   CAPABILITY MATRIX
+   ========================================================= */
+
+.skills-grid {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+
+/* =========================================================
+   SKILL MODULE
+   ========================================================= */
+
+.skill-module {
+  position: relative;
+
+  overflow: hidden;
+
+  border:
+    1px solid rgba(105, 216, 255, 0.13);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(6, 20, 29, 0.78),
+      rgba(2, 8, 13, 0.68)
+    );
+
+  box-shadow:
+    0 24px 70px rgba(0, 0, 0, 0.32),
+    0 0 50px rgba(0, 145, 255, 0.035);
+
+  transition:
+    transform 0.28s ease,
+    border-color 0.28s ease,
+    box-shadow 0.28s ease;
+}
+
+
+.skill-module::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 44px;
+  height: 44px;
+
+  border-top:
+    1px solid rgba(141, 229, 255, 0.9);
+
+  border-left:
+    1px solid rgba(141, 229, 255, 0.9);
+
+  filter:
+    drop-shadow(0 0 8px rgba(105, 216, 255, 0.4));
+
+  pointer-events: none;
+}
+
+
+.skill-module::after {
+  content: "";
+
+  position: absolute;
+
+  right: 0;
+  bottom: 0;
+
+  width: 44px;
+  height: 44px;
+
+  border-right:
+    1px solid rgba(141, 229, 255, 0.9);
+
+  border-bottom:
+    1px solid rgba(141, 229, 255, 0.9);
+
+  filter:
+    drop-shadow(0 0 8px rgba(105, 216, 255, 0.4));
+
+  pointer-events: none;
+}
+
+
+.skill-module:hover {
+  transform:
+    translateY(-5px);
+
+  border-color:
+    rgba(105, 216, 255, 0.28);
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.36),
+    0 0 60px rgba(0, 145, 255, 0.075);
+}
+
+
+/* =========================================================
+   MODULE HEADER
+   ========================================================= */
+
+.skill-module-header {
+  min-height: 72px;
+
+  display: grid;
+
+  grid-template-columns:
+    auto 1fr auto;
+
+  align-items: center;
+
+  gap: 16px;
+
+  padding:
+    16px 18px;
+
+  border-bottom:
+    1px solid rgba(105, 216, 255, 0.09);
+}
+
+
+.skill-module-header > span:first-child {
+  width: 36px;
+  height: 36px;
+
+  display: grid;
+  place-items: center;
+
+  border:
+    1px solid rgba(105, 216, 255, 0.24);
+
+  border-radius: 50%;
+
+  color: #69d8ff;
+
+  font-family: monospace;
+  font-size: 8px;
+}
+
+
+.skill-module-header div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+
+.skill-module-header strong {
+  color: #b9cedc;
+
+  font-family: monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+}
+
+
+.skill-module-header small {
+  color: #4f6b80;
+
+  font-family: monospace;
+  font-size: 7px;
+  letter-spacing: 0.16em;
+}
+
+
+.skill-module-status {
+  color: #69d8ff;
+
+  font-family: monospace;
+  font-size: 7px;
+  letter-spacing: 0.15em;
+}
+
+
+/* =========================================================
+   MODULE BODY
+   ========================================================= */
+
+.skill-module-body {
+  padding:
+    8px 18px;
+}
+
+
+.skill-node {
+  min-height: 48px;
+
+  display: grid;
+
+  grid-template-columns:
+    42px 1fr auto;
+
+  align-items: center;
+
+  gap: 12px;
+
+  border-bottom:
+    1px solid rgba(105, 216, 255, 0.06);
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+
+.skill-node:last-child {
+  border-bottom: 0;
+}
+
+
+.skill-node:hover {
+  transform:
+    translateX(5px);
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(105, 216, 255, 0.035),
+      transparent
+    );
+}
+
+
+.skill-node-index {
+  color: #3d596e;
+
+  font-family: monospace;
+  font-size: 7px;
+  letter-spacing: 0.12em;
+}
+
+
+.skill-node-name {
+  color: #8fa8b9;
+
+  font-family: monospace;
+  font-size: 9px;
+  letter-spacing: 0.13em;
+}
+
+
+/* =========================================================
+   SIGNAL INDICATOR
+   ========================================================= */
+
+.skill-node-signal {
+  display: flex;
+  align-items: end;
+
+  gap: 3px;
+
+  height: 14px;
+}
+
+
+.skill-node-signal span {
+  width: 2px;
+
+  background:
+    #69d8ff;
+
+  box-shadow:
+    0 0 5px rgba(105, 216, 255, 0.45);
+
+  animation:
+    skill-signal 2.4s ease-in-out infinite;
+}
+
+
+.skill-node-signal span:nth-child(1) {
+  height: 40%;
+}
+
+
+.skill-node-signal span:nth-child(2) {
+  height: 70%;
+
+  animation-delay: 0.18s;
+}
+
+
+.skill-node-signal span:nth-child(3) {
+  height: 100%;
+
+  animation-delay: 0.36s;
+}
+
+
+/* =========================================================
+   MODULE FOOTER
+   ========================================================= */
+
+.skill-module-footer {
+  min-height: 36px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding:
+    0 18px;
+
+  border-top:
+    1px solid rgba(105, 216, 255, 0.07);
+
+  color: #3e596d;
+
+  font-family: monospace;
+  font-size: 7px;
+  letter-spacing: 0.14em;
+}
+
+
+/* =========================================================
+   ADDITIONAL KNOWLEDGE
+   ========================================================= */
+
+.skills-additional {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1400px;
+
+  margin:
+    24px auto 0;
+
+  overflow: hidden;
+
+  border:
+    1px solid rgba(105, 216, 255, 0.12);
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 18, 27, 0.62),
+      rgba(3, 12, 18, 0.45)
+    );
+
+  box-shadow:
+    0 16px 38px rgba(0, 0, 0, 0.18),
+    0 0 28px rgba(0, 145, 255, 0.02);
+}
+
+
+/* =========================================================
+   ADDITIONAL HEADER
+   ========================================================= */
+
+.skills-additional-header {
+  min-height: 38px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding:
+    0 18px;
+
+  border-bottom:
+    1px solid rgba(105, 216, 255, 0.08);
+
+  color: #48657a;
+
+  font-family: monospace;
+  font-size: 7px;
+  letter-spacing: 0.15em;
+}
+
+
+.skills-additional-header > div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+}
+
+
+.skills-additional-dot {
+  width: 4px;
+  height: 4px;
+
+  flex: 0 0 auto;
+
+  border-radius: 50%;
+
+  background: #69d8ff;
+
+  box-shadow:
+    0 0 8px #69d8ff,
+    0 0 15px rgba(105, 216, 255, 0.4);
+}
+
+
+/* =========================================================
+   ADDITIONAL LIST
+   ========================================================= */
+
+.skills-additional-list {
+  display: grid;
+
+  grid-template-columns:
+    repeat(5, minmax(0, 1fr));
+}
+
+
+.skills-additional-node {
+  min-height: 58px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  padding:
+    0 18px;
+
+  border-right:
+    1px solid rgba(105, 216, 255, 0.07);
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.skills-additional-node:last-child {
+  border-right: 0;
+}
+
+
+.skills-additional-node:hover {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(105, 216, 255, 0.045),
+      rgba(105, 216, 255, 0.012)
+    );
+
+  transform:
+    translateY(-2px);
+}
+
+
+.skills-additional-node > span {
+  color: #38566b;
+
+  font-family: monospace;
+  font-size: 7px;
+  letter-spacing: 0.12em;
+}
+
+
+.skills-additional-node strong {
+  color: #819cad;
+
+  font-family: monospace;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+}
+
+
+/* =========================================================
+   CURRENT FOCUS
+   ========================================================= */
+
+.skills-focus {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1400px;
+
+  margin:
+    12px auto 0;
+
+  display: grid;
+
+  grid-template-columns:
+    auto minmax(250px, 1fr) auto;
+
+  align-items: center;
+
+  gap: 28px;
+
+  padding:
+    20px 22px;
+
+  border:
+    1px solid rgba(105, 216, 255, 0.14);
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 18, 27, 0.72),
+      rgba(3, 12, 18, 0.52)
+    );
+
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.22),
+    0 0 28px rgba(0, 145, 255, 0.025);
+}
+
+
+.skills-focus-label {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  color: #69d8ff;
+}
+
+
+.skills-focus-label > div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+
+.skills-focus-label > div > span {
+  color: #69d8ff;
+
+  font-family: monospace;
+  font-size: 7px;
+  letter-spacing: 0.16em;
+
+  white-space: nowrap;
+}
+
+
+.skills-focus-label strong {
+  color: #8eabba;
+
+  font-family: monospace;
+  font-size: 8px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+
+  white-space: nowrap;
+}
+
+
+.skills-focus-dot {
+  width: 5px;
+  height: 5px;
+
+  flex: 0 0 auto;
+
+  border-radius: 50%;
+
+  background: #69d8ff;
+
+  box-shadow:
+    0 0 10px #69d8ff;
+}
+
+
+.skills-focus p {
+  margin: 0;
+
+  color: #758c9f;
+
+  font-size: 13px;
+
+  line-height: 1.65;
+}
+
+
+.skills-focus-code {
+  color: #46657a;
+
+  font-family: monospace;
+  font-size: 7px;
+  letter-spacing: 0.14em;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes skill-signal {
+  0%,
+  100% {
+    opacity: 0.35;
+
+    transform:
+      scaleY(0.7);
+
+    transform-origin: bottom;
+  }
+
+  50% {
+    opacity: 1;
+
+    transform:
+      scaleY(1);
+
+    transform-origin: bottom;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 950px) {
+  .skills-intro {
+    grid-template-columns:
+      1fr;
+
+    align-items: start;
+  }
+
+
+  .skills-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .skills-description {
+    max-width: 680px;
+  }
+
+
+  .skills-additional-list {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+
+  .skills-additional-node {
+    border-bottom:
+      1px solid rgba(105, 216, 255, 0.07);
+  }
+
+
+  .skills-focus {
+    grid-template-columns:
+      1fr;
+
+    gap: 14px;
+  }
+
+
+  .skills-focus-label strong {
+    white-space: normal;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .skills {
+    padding:
+      90px 20px 110px;
+  }
+
+
+  .skills-heading {
+    margin-bottom: 45px;
+  }
+
+
+  .skills-heading span:last-child {
+    display: none;
+  }
+
+
+  .skills-intro {
+    margin-bottom: 50px;
+  }
+
+
+  .skills-intro h2 {
+    font-size:
+      clamp(52px, 16vw, 78px);
+  }
+
+
+  .skills-description {
+    font-size: 14px;
+  }
+
+
+  .skill-module-header {
+    grid-template-columns:
+      auto 1fr;
+  }
+
+
+  .skill-module-status {
+    display: none;
+  }
+
+
+  .skill-node {
+    grid-template-columns:
+      34px 1fr auto;
+  }
+
+
+  .skills-additional-list {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .skills-additional-header > span:last-child {
+    display: none;
+  }
+
+
+  .skills-additional-node {
+    border-right: 0;
+  }
+
+
+  .skills-focus-code {
+    display: none;
+  }
+
+
+  .skills-focus-label strong {
+    white-space: normal;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .skill-node-signal span {
+    animation: none;
+  }
+
+
+  .skill-module,
+  .skill-node,
+  .skills-additional-node {
+    transition: none;
+  }
+}

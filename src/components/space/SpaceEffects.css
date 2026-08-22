@@ -1,0 +1,373 @@
+/* =========================================================
+   GLOBAL SPACE EFFECTS
+
+   Una sola capa para todo el portfolio.
+   Los meteoros siguen activos mientras el usuario navega
+   por Hero, About, Projects y las futuras secciones.
+
+   La capa está por encima del contenido visual, pero por
+   debajo del cursor personalizado.
+   ========================================================= */
+
+.space-effects {
+  position: fixed;
+  inset: 0;
+
+  z-index: 9000;
+
+  overflow: hidden;
+  pointer-events: none;
+
+  contain: layout paint;
+}
+
+
+/* =========================================================
+   METEOR BASE
+   ========================================================= */
+
+.global-meteor {
+  position: absolute;
+
+  right: -240px;
+
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: rgba(245, 253, 255, 1);
+
+  box-shadow:
+    0 0 5px rgba(255, 255, 255, 1),
+    0 0 12px rgba(105, 216, 255, 0.95),
+    0 0 25px rgba(50, 165, 255, 0.65),
+    0 0 42px rgba(30, 125, 255, 0.24);
+
+  opacity: 0;
+
+  will-change: transform, opacity;
+}
+
+
+/* =========================================================
+   METEOR TAIL
+
+   Movimiento:
+   derecha -> izquierda + descendente.
+
+   La cola sale hacia la derecha y hacia arriba,
+   es decir, siempre queda detrás de la cabeza.
+   ========================================================= */
+
+.global-meteor::after {
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+  left: 100%;
+
+  width: 185px;
+  height: 2px;
+
+  transform:
+    translateY(-50%)
+    rotate(-28deg);
+
+  transform-origin: left center;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(245, 253, 255, 0.96) 0%,
+      rgba(105, 216, 255, 0.64) 18%,
+      rgba(60, 170, 255, 0.24) 46%,
+      rgba(30, 130, 255, 0.07) 72%,
+      transparent 100%
+    );
+}
+
+
+/* =========================================================
+   BURST A
+
+   Tres meteoros separados por unas décimas.
+   Aparece con mayor frecuencia.
+   ========================================================= */
+
+.meteor-a {
+  top: 18%;
+
+  animation:
+    global-meteor-a 18s linear infinite;
+}
+
+.meteor-a1 {
+  animation-delay: 1s;
+}
+
+.meteor-a2 {
+  top: 22%;
+
+  width: 4px;
+  height: 4px;
+
+  animation-delay: 1.48s;
+}
+
+.meteor-a2::after {
+  width: 145px;
+  height: 1px;
+}
+
+.meteor-a3 {
+  top: 15%;
+
+  width: 3px;
+  height: 3px;
+
+  animation-delay: 1.96s;
+}
+
+.meteor-a3::after {
+  width: 115px;
+  height: 1px;
+}
+
+
+/* =========================================================
+   BURST B
+
+   Cruza por otra zona del viewport y usa otro ciclo.
+   ========================================================= */
+
+.meteor-b {
+  top: 42%;
+
+  animation:
+    global-meteor-b 27s linear infinite;
+}
+
+.meteor-b1 {
+  animation-delay: 7s;
+}
+
+.meteor-b2 {
+  top: 46%;
+
+  width: 4px;
+  height: 4px;
+
+  animation-delay: 7.52s;
+}
+
+.meteor-b2::after {
+  width: 155px;
+  height: 1px;
+
+  transform:
+    translateY(-50%)
+    rotate(-32deg);
+}
+
+.meteor-b3 {
+  top: 38%;
+
+  width: 3px;
+  height: 3px;
+
+  animation-delay: 8.04s;
+}
+
+.meteor-b3::after {
+  width: 120px;
+  height: 1px;
+
+  transform:
+    translateY(-50%)
+    rotate(-32deg);
+}
+
+
+/* =========================================================
+   BURST C
+
+   Más raro, más brillante y con mayor inclinación.
+   ========================================================= */
+
+.meteor-c {
+  top: 62%;
+
+  width: 6px;
+  height: 6px;
+
+  animation:
+    global-meteor-c 36s linear infinite;
+}
+
+.meteor-c1 {
+  animation-delay: 14s;
+}
+
+.meteor-c1::after {
+  width: 230px;
+
+  transform:
+    translateY(-50%)
+    rotate(-35deg);
+}
+
+.meteor-c2 {
+  top: 67%;
+
+  width: 4px;
+  height: 4px;
+
+  animation-delay: 14.58s;
+}
+
+.meteor-c2::after {
+  width: 170px;
+
+  transform:
+    translateY(-50%)
+    rotate(-35deg);
+}
+
+.meteor-c3 {
+  top: 58%;
+
+  width: 3px;
+  height: 3px;
+
+  animation-delay: 15.16s;
+}
+
+.meteor-c3::after {
+  width: 130px;
+  height: 1px;
+
+  transform:
+    translateY(-50%)
+    rotate(-35deg);
+}
+
+
+/* =========================================================
+   TRAJECTORY A
+   ========================================================= */
+
+@keyframes global-meteor-a {
+  0%,
+  62% {
+    opacity: 0;
+
+    transform:
+      translate3d(0, 0, 0);
+  }
+
+  63% {
+    opacity: 1;
+  }
+
+  74% {
+    opacity: 1;
+  }
+
+  80%,
+  100% {
+    opacity: 0;
+
+    transform:
+      translate3d(-135vw, 62vh, 0);
+  }
+}
+
+
+/* =========================================================
+   TRAJECTORY B
+   ========================================================= */
+
+@keyframes global-meteor-b {
+  0%,
+  70% {
+    opacity: 0;
+
+    transform:
+      translate3d(0, 0, 0);
+  }
+
+  71% {
+    opacity: 0.9;
+  }
+
+  81% {
+    opacity: 0.9;
+  }
+
+  87%,
+  100% {
+    opacity: 0;
+
+    transform:
+      translate3d(-140vw, 72vh, 0);
+  }
+}
+
+
+/* =========================================================
+   TRAJECTORY C
+   ========================================================= */
+
+@keyframes global-meteor-c {
+  0%,
+  76% {
+    opacity: 0;
+
+    transform:
+      translate3d(0, 0, 0);
+  }
+
+  77% {
+    opacity: 1;
+  }
+
+  86% {
+    opacity: 1;
+  }
+
+  92%,
+  100% {
+    opacity: 0;
+
+    transform:
+      translate3d(-145vw, 82vh, 0);
+  }
+}
+
+
+/* =========================================================
+   TOUCH DEVICES
+
+   Los dejamos activos en pantallas táctiles grandes,
+   pero bajamos un poco la intensidad visual.
+   ========================================================= */
+
+@media (pointer: coarse) {
+  .global-meteor {
+    opacity: 0;
+    filter: brightness(0.8);
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .space-effects {
+    display: none;
+  }
+}

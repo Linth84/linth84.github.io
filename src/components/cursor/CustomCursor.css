@@ -1,0 +1,120 @@
+/* =========================================================
+   CUSTOM SCI-FI CURSOR
+   Desktop only
+   ========================================================= */
+
+@media (pointer: fine) {
+
+  body {
+    cursor: none;
+  }
+
+  a,
+  button,
+  video {
+    cursor: none;
+  }
+
+
+  /* =======================================================
+     INNER DOT
+     ======================================================= */
+
+  .custom-cursor-dot {
+    position: fixed;
+
+    top: -3px;
+    left: -3px;
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #bcefff;
+
+    box-shadow:
+      0 0 7px rgba(190, 240, 255, 0.95),
+      0 0 15px rgba(80, 190, 255, 0.65);
+
+    pointer-events: none;
+
+    z-index: 99999;
+
+    will-change: transform;
+  }
+
+
+  /* =======================================================
+     OUTER HUD RING
+     ======================================================= */
+
+  .custom-cursor-ring {
+    position: fixed;
+
+    top: -18px;
+    left: -18px;
+
+    width: 36px;
+    height: 36px;
+
+    border:
+      1px solid rgba(105, 216, 255, 0.55);
+
+    border-radius: 50%;
+
+    box-shadow:
+      0 0 14px rgba(70, 185, 255, 0.10),
+      inset 0 0 10px rgba(70, 185, 255, 0.05);
+
+    pointer-events: none;
+
+    z-index: 99998;
+
+    transition:
+      width 0.2s ease,
+      height 0.2s ease,
+      top 0.2s ease,
+      left 0.2s ease,
+      border-color 0.2s ease,
+      box-shadow 0.2s ease;
+
+    will-change: transform;
+  }
+
+
+  /* =======================================================
+     HOVER STATE
+     ======================================================= */
+
+  .custom-cursor-ring.cursor-hover {
+    top: -26px;
+    left: -26px;
+
+    width: 52px;
+    height: 52px;
+
+    border-color:
+      rgba(105, 216, 255, 0.9);
+
+    box-shadow:
+      0 0 18px rgba(70, 185, 255, 0.22),
+      0 0 36px rgba(40, 150, 255, 0.10),
+      inset 0 0 16px rgba(70, 185, 255, 0.08);
+  }
+}
+
+
+/* =========================================================
+   TOUCH DEVICES
+
+   En celular/tablet dejamos el cursor normal
+   porque no existe mouse real.
+   ========================================================= */
+
+@media (pointer: coarse) {
+  .custom-cursor-ring,
+  .custom-cursor-dot {
+    display: none;
+  }
+}
