@@ -1,77 +1,127 @@
-# React + TypeScript + Vite
+# Edgardo Villalba — Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal developer portfolio showcasing my work across full-stack development, artificial intelligence, data science and mobile applications.
 
-Currently, two official plugins are available:
+Built as an interactive bilingual experience with a visual system inspired by space, telemetry interfaces and technical HUDs.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## About
 
-## React Compiler
+I'm Edgardo Villalba, a developer based in Buenos Aires, Argentina.
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+My work focuses on building useful digital products and exploring the intersection between software development, artificial intelligence and data.
 
-Note: This will impact Vite dev & build performances.
+This portfolio brings together some of the projects I've built independently and collaboratively, including web platforms, AI-powered systems and mobile applications.
 
-## Expanding the ESLint configuration
+## Featured Projects
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### FinSightAI
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+An intelligent financial analysis platform designed to transform transaction data into clear and actionable insights.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+The project combines:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Full-stack development
+- Machine Learning
+- Financial data analysis
+- AI-powered conversational assistance
+- React
+- Spring Boot
+- FastAPI
+- Python
+- PostgreSQL
+- Docker
+- Oracle Cloud Infrastructure
 
-```
+FinSightAI was developed collaboratively by **TwentyNine Devs** as part of a NoCountry simulation project.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Repository:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+https://github.com/Linth84/FinSightAI
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
 
-```
+### PIF Tracker
+
+A mobile application created to help organize and track information related to Feline Infectious Peritonitis (FIP/PIF) treatment.
+
+The application includes treatment tracking, dosage calculations, weight records and other tools designed around a practical mobile workflow.
+
+Available on Google Play.
+
+https://play.google.com/store/apps/details?id=com.linthapps.piftracker&hl=en
+
+---
+
+### SootheWaveApp
+
+A mobile wellness application focused on guided relaxation experiences.
+
+It includes multiple guided modes, session controls, progress tracking and customizable sound options.
+
+Graphic design and visual assets were created in collaboration with **Facundo Morello**.
+
+Facundo's work:
+
+https://www.deviantart.com/facuam
+
+Available on Google Play.
+
+https://play.google.com/store/apps/details?id=com.linthapps.soothewaveapp&hl=en
+
+## Portfolio Features
+
+- Responsive interface
+- English / Spanish language support
+- Interactive project case studies
+- Animated transitions with GSAP
+- Custom cursor interactions
+- Space-inspired visual effects
+- Project videos and live interface previews
+- Responsive mobile layouts
+- External GitHub and Google Play integration
+
+## Tech Stack
+
+### Frontend
+
+- React
+- TypeScript
+- Vite
+- HTML5
+- CSS3
+
+### Animation & Interaction
+
+- GSAP
+- ScrollTrigger
+
+### Routing
+
+- React Router
+
+### Development Tools
+
+- Git
+- GitHub
+- Visual Studio Code
+- npm
+
+## Project Structure
+
+```text
+src/
+├── components/
+│   ├── about/
+│   ├── case-study/
+│   ├── cursor/
+│   ├── hero/
+│   ├── projects/
+│   └── skills/
+├── i18n/
+├── pages/
+├── App.tsx
+└── main.tsx
+
+public/
+├── images/
+└── videos/
