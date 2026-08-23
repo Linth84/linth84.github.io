@@ -133,7 +133,11 @@ export default function Hero() {
           </a>
 
           <a
-            href="#contact"
+            href={
+              language === 'es'
+                ? 'mailto:villalbaed84@gmail.com?subject=Contacto%20desde%20tu%20portfolio'
+                : 'mailto:villalbaed84@gmail.com?subject=Portfolio%20Contact'
+            }
             className="secondary-action"
           >
             {hero.actions.contact}
