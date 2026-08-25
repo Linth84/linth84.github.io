@@ -18,6 +18,7 @@ import SpaceEffects from './components/space/SpaceEffects'
 import FinSightCaseStudy from './pages/FinSightCaseStudy'
 import PifTrackerCaseStudy from './pages/PifTrackerCaseStudy'
 import SootheWaveCaseStudy from './pages/SootheWaveCaseStudy'
+import DSTimeCaseStudy from './pages/DSTimeCaseStudy'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -181,6 +182,49 @@ function Home() {
           scrub: 1,
         },
       })
+
+          /* =========================
+         DS-TIME
+         ========================= */
+
+      gsap.from('.project-dstime .projects-heading', {
+        opacity: 0,
+        y: 38,
+
+        scrollTrigger: {
+          trigger: '.project-dstime',
+          start: 'top 88%',
+          end: 'top 68%',
+          scrub: 1,
+        },
+      })
+
+      gsap.from('.project-dstime .project-info', {
+        opacity: 0,
+        x: 95,
+
+        scrollTrigger: {
+          trigger: '.project-dstime',
+          start: 'top 82%',
+          end: 'top 54%',
+          scrub: 1,
+        },
+      })
+
+      gsap.from('.project-dstime .dstime-system', {
+        opacity: 0,
+        x: -110,
+        y: 30,
+        scale: 0.94,
+
+        scrollTrigger: {
+          trigger: '.project-dstime',
+          start: 'top 82%',
+          end: 'top 48%',
+          scrub: 1,
+        },
+      })
+
 
       /* =========================
          FIP TRACKER
@@ -380,6 +424,10 @@ function AppRoutes() {
           path="/projects/finsightai"
           element={<FinSightCaseStudy />}
         />
+
+        <Route path="/projects/ds-time"
+         element={<DSTimeCaseStudy />} 
+         />
 
 
         <Route

@@ -82,6 +82,7 @@ export const translations = {
     projects: {
       common: {
         mobileApplication: 'MOBILE APPLICATION',
+        desktopApplication: 'DESKTOP WEB APPLICATION',
         selectedWork: 'SELECTED WORK',
         online: 'ONLINE',
         systemReady: 'SYSTEM READY',
@@ -108,8 +109,19 @@ export const translations = {
         },
       },
 
-      fip: {
+      dstime: {
         archive: 'PROJECT ARCHIVE // 02',
+        type: 'WEB APP / TIMEZONE UTILITY',
+        title: 'DS-Time',
+        tagline: 'One time. Every timezone.',
+        description:
+          'A multilingual Discord timestamp generator that makes scheduling across time zones simple, with customizable messages, multiple timestamp formats and real-time previews.',
+        feed: 'DS-TIME // LIVE INTERFACE',
+        liveDemo: 'LIVE DEMO',
+      },
+
+      fip: {
+        archive: 'PROJECT ARCHIVE // 03',
         type: 'MOBILE / HEALTH TRACKING',
         title: 'FIP Tracker',
         tagline: 'Supporting cats through FIP treatment.',
@@ -119,7 +131,7 @@ export const translations = {
       },
 
       soothe: {
-        archive: 'PROJECT ARCHIVE // 03',
+        archive: 'PROJECT ARCHIVE // 04',
         type: 'MOBILE / WELLNESS',
         title: 'SootheWaveApp',
         tagline: 'A calmer digital space.',
@@ -358,6 +370,31 @@ export const translations = {
         footerTitle: 'Built to make financial data easier to understand.',
       },
 
+
+      dstime: {
+        back: 'BACK TO PORTFOLIO', type: 'WEB APP / TIMEZONE UTILITY', title: 'DS-Time',
+        tagline: 'One time. Every timezone.',
+        lead: 'A Discord timestamp generator for effortless scheduling across time zones, with customizable messages, multiple formats, languages and a real-time Discord-style preview.',
+        explore: 'EXPLORE CASE STUDY', stackAction: 'VIEW TECH STACK', liveDemo: 'LIVE DEMO', heroFeed: 'TIMESTAMP GENERATOR',
+        metrics: { formats: 'TIMESTAMP FORMATS', languages: 'INTERFACE LANGUAGES', preview: 'REAL-TIME PREVIEW', clientSide: 'CLIENT-SIDE APP' },
+        sections: {
+          overview: { eyebrow: 'PROJECT OVERVIEW', title: 'A small utility built around a universal scheduling problem.', p1: 'DS-Time makes Discord timestamps easier to create without memorizing syntax or manually converting time zones. The generated timestamp is interpreted by Discord and displayed in each viewer’s local time.', p2: 'The app combines date and time selection, multiple display formats, customizable message composition and a Discord-style preview in one focused desktop web experience.' },
+          problem: { eyebrow: 'PROBLEM / SOLUTION', title: 'One event time, many local clocks.', problemLabel: 'THE PROBLEM', solutionLabel: 'THE SOLUTION', problem: 'International communities often coordinate events across several time zones. Writing a fixed time can create confusion and forces each person to convert it manually.', solution: 'DS-Time generates Discord-compatible timestamps that automatically adapt to the local time of each viewer, while keeping the creation flow visual and easy to understand.' },
+          features: { eyebrow: 'KEY FEATURES', title: 'Everything needed to build and preview a Discord timestamp.' },
+          design: { eyebrow: 'DESIGN / EXPERIENCE', title: 'A focused interface with immediate visual feedback.', body: 'The interface keeps the generator, format choices, message composition and preview close together so changes can be understood immediately without leaving the workflow.' },
+          stack: { eyebrow: 'TECH STACK', title: 'A lightweight frontend stack for a focused utility.' },
+          learnings: { eyebrow: 'CHALLENGES / LEARNINGS', title: 'Dates, localization and small UX details matter.', p1: 'Working with timestamps reinforced the importance of separating a universal point in time from the way that moment is displayed to each user.', p2: 'Adding multiple languages and responsive behavior highlighted how quickly text length, controls and layout can change across locales and screen sizes.' }
+        },
+        features: [
+          { title: 'Multiple Timestamp Formats', description: 'Choose between Discord timestamp styles including date, time, combined and relative displays.' },
+          { title: 'Relative Time', description: 'Generate relative timestamps that Discord can render contextually.' },
+          { title: 'Custom Message Builder', description: 'Compose a complete message around the generated timestamp.' },
+          { title: 'Real-time Preview', description: 'See a Discord-style preview while adjusting the timestamp and message.' },
+          { title: 'Multilingual Interface', description: 'The interface supports multiple languages for international communities.' },
+          { title: 'Copy to Clipboard', description: 'Copy the generated timestamp or composed message directly for Discord.' }
+        ],
+        footerTitle: 'One time. Every timezone.',
+      },
 
       pif: {
         back: 'BACK TO PORTFOLIO',
@@ -689,6 +726,7 @@ export const translations = {
     projects: {
       common: {
         mobileApplication: 'APLICACIÓN MÓVIL',
+        desktopApplication: 'APLICACIÓN WEB DE ESCRITORIO',
         selectedWork: 'TRABAJO DESTACADO',
         online: 'ONLINE',
         systemReady: 'SISTEMA LISTO',
@@ -715,8 +753,19 @@ export const translations = {
         },
       },
 
-      fip: {
+      dstime: {
         archive: 'ARCHIVO DE PROYECTO // 02',
+        type: 'WEB APP / UTILIDAD HORARIA',
+        title: 'DS-Time',
+        tagline: 'Una hora. Todas las zonas horarias.',
+        description:
+          'Un generador multilingüe de timestamps para Discord que simplifica la coordinación entre zonas horarias, con mensajes personalizables, múltiples formatos y vista previa en tiempo real.',
+        feed: 'DS-TIME // INTERFAZ EN VIVO',
+        liveDemo: 'DEMO EN VIVO',
+      },
+
+      fip: {
+        archive: 'ARCHIVO DE PROYECTO // 03',
         type: 'MÓVIL / SEGUIMIENTO DE SALUD',
         title: 'PIF Tracker',
         tagline: 'Acompañando a los gatos durante el tratamiento de la PIF.',
@@ -726,7 +775,7 @@ export const translations = {
       },
 
       soothe: {
-        archive: 'ARCHIVO DE PROYECTO // 03',
+        archive: 'ARCHIVO DE PROYECTO // 04',
         type: 'MÓVIL / BIENESTAR',
         title: 'SootheWaveApp',
         tagline: 'Un espacio digital más tranquilo.',
@@ -965,6 +1014,31 @@ export const translations = {
         footerTitle: 'Construido para hacer los datos financieros más fáciles de comprender.',
       },
 
+
+      dstime: {
+        back: 'VOLVER AL PORTFOLIO', type: 'WEB APP / UTILIDAD HORARIA', title: 'DS-Time',
+        tagline: 'Una hora. Todas las zonas horarias.',
+        lead: 'Un generador de timestamps para Discord diseñado para coordinar horarios fácilmente entre zonas horarias, con mensajes personalizables, múltiples formatos, idiomas y vista previa en tiempo real.',
+        explore: 'EXPLORAR CASO DE ESTUDIO', stackAction: 'VER STACK TECNOLÓGICO', liveDemo: 'DEMO EN VIVO', heroFeed: 'GENERADOR DE TIMESTAMPS',
+        metrics: { formats: 'FORMATOS DE TIMESTAMP', languages: 'IDIOMAS DE INTERFAZ', preview: 'VISTA PREVIA EN TIEMPO REAL', clientSide: 'APP CLIENT-SIDE' },
+        sections: {
+          overview: { eyebrow: 'RESUMEN DEL PROYECTO', title: 'Una utilidad pequeña construida alrededor de un problema universal de coordinación.', p1: 'DS-Time facilita la creación de timestamps de Discord sin memorizar sintaxis ni convertir zonas horarias manualmente. Discord interpreta el timestamp generado y lo muestra según la hora local de cada persona.', p2: 'La aplicación reúne selección de fecha y hora, múltiples formatos, composición de mensajes personalizables y una vista previa estilo Discord dentro de una experiencia web de escritorio enfocada.' },
+          problem: { eyebrow: 'PROBLEMA / SOLUCIÓN', title: 'Un mismo evento, muchos relojes locales.', problemLabel: 'EL PROBLEMA', solutionLabel: 'LA SOLUCIÓN', problem: 'Las comunidades internacionales suelen coordinar eventos entre varias zonas horarias. Escribir una hora fija puede generar confusión y obliga a cada persona a convertirla manualmente.', solution: 'DS-Time genera timestamps compatibles con Discord que se adaptan automáticamente a la hora local de cada usuario, manteniendo un flujo de creación visual y fácil de comprender.' },
+          features: { eyebrow: 'FUNCIONALIDADES PRINCIPALES', title: 'Todo lo necesario para crear y previsualizar un timestamp de Discord.' },
+          design: { eyebrow: 'DISEÑO / EXPERIENCIA', title: 'Una interfaz enfocada con feedback visual inmediato.', body: 'La interfaz mantiene cerca el generador, las opciones de formato, la composición del mensaje y la vista previa para que cada cambio pueda entenderse inmediatamente.' },
+          stack: { eyebrow: 'STACK TECNOLÓGICO', title: 'Un stack frontend liviano para una utilidad enfocada.' },
+          learnings: { eyebrow: 'DESAFÍOS / APRENDIZAJES', title: 'Fechas, localización y pequeños detalles de UX importan.', p1: 'Trabajar con timestamps reforzó la importancia de separar un instante universal de la forma en que ese momento se muestra a cada usuario.', p2: 'Agregar múltiples idiomas y comportamiento responsive mostró cuánto pueden cambiar los textos, controles y layout entre idiomas y tamaños de pantalla.' }
+        },
+        features: [
+          { title: 'Múltiples Formatos de Timestamp', description: 'Permite elegir entre distintos estilos de Discord para fecha, hora, combinaciones y tiempo relativo.' },
+          { title: 'Tiempo Relativo', description: 'Genera timestamps relativos que Discord puede mostrar de forma contextual.' },
+          { title: 'Constructor de Mensajes', description: 'Permite componer un mensaje completo alrededor del timestamp.' },
+          { title: 'Vista Previa en Tiempo Real', description: 'Muestra una vista previa estilo Discord mientras se ajustan el formato y el mensaje.' },
+          { title: 'Interfaz Multilingüe', description: 'La interfaz admite múltiples idiomas para comunidades internacionales.' },
+          { title: 'Copiar al Portapapeles', description: 'Copia directamente el timestamp o mensaje completo para Discord.' }
+        ],
+        footerTitle: 'Una hora. Todas las zonas horarias.',
+      },
 
       pif: {
         back: 'VOLVER AL PORTFOLIO',

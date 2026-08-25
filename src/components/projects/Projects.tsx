@@ -118,7 +118,49 @@ export default function Projects() {
       </div>
 
       {/* =====================================================
-          PROJECT 02 // FIP / PIF TRACKER
+          PROJECT 02 // DS-TIME
+          ===================================================== */}
+
+      <div className="project-section project-dstime">
+        <div className="projects-heading">
+          <span>{projects.dstime.archive}</span>
+          <span>{projects.common.desktopApplication}</span>
+        </div>
+
+        <article className="dstime-project-layout">
+          <DesktopDisplay
+            number="02"
+            feed={projects.dstime.feed}
+            online={projects.common.online}
+            src="/videos/ds-time/ds-time.webm"
+          />
+
+          <div className="project-info">
+            <div className="project-index">
+              <span>02</span>
+              <span>{projects.dstime.type}</span>
+            </div>
+            <h2>{projects.dstime.title}</h2>
+            <p className="project-tagline">{projects.dstime.tagline}</p>
+            <p className="project-description">{projects.dstime.description}</p>
+            <div className="project-stack">
+              <span>REACT</span><span>TYPESCRIPT</span><span>VITE</span><span>RESPONSIVE DESIGN</span>
+            </div>
+            <div className="project-actions">
+              <Link to="/projects/ds-time" className="project-primary">
+                {projects.common.viewProject}<span>↗</span>
+              </Link>
+              <a href="https://edgardovillalba.is-a.dev/DS-Time/" target="_blank" rel="noopener noreferrer" className="project-secondary">
+                {projects.dstime.liveDemo}
+              </a>
+              <a href="https://github.com/Linth84/DS-Time" target="_blank" rel="noopener noreferrer" className="project-secondary">GITHUB</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      {/* =====================================================
+          PROJECT 03 // FIP / PIF TRACKER
           ===================================================== */}
 
       <div className="project-section mobile-project project-fip">
@@ -130,7 +172,7 @@ export default function Projects() {
         <article className="mobile-project-layout">
           <div className="project-info">
             <div className="project-index">
-              <span>02</span>
+              <span>04</span>
               <span>{projects.fip.type}</span>
             </div>
 
@@ -173,7 +215,7 @@ export default function Projects() {
           </div>
 
           <PhoneDisplay
-            number="02"
+            number="04"
             system={projects.fip.system}
             mobileSystemOnline={projects.phone.mobileSystemOnline}
             src="/videos/pif-tracker/pif-tracker-demo.webm"
@@ -183,7 +225,7 @@ export default function Projects() {
       </div>
 
       {/* =====================================================
-          PROJECT 03 // SOOTHEWAVEAPP
+          PROJECT 04 // SOOTHEWAVEAPP
           ===================================================== */}
 
       <div className="project-section mobile-project project-soothe">
@@ -281,6 +323,35 @@ function VideoPanel({
         playsInline
         preload="metadata"
       />
+    </div>
+  )
+}
+
+
+/* =========================================================
+   DESKTOP WEB APP DISPLAY
+   ========================================================= */
+
+type DesktopDisplayProps = {
+  number: string
+  feed: string
+  online: string
+  src: string
+}
+
+function DesktopDisplay({ number, feed, online, src }: DesktopDisplayProps) {
+  return (
+    <div className="dstime-system">
+      <div className="dstime-telemetry"><span>WEB APP // {number}</span><span>{feed}</span></div>
+      <div className="dstime-glow" />
+      <div className="dstime-browser">
+        <div className="dstime-browser-bar">
+          <div className="dstime-browser-dots" aria-hidden="true"><span /><span /><span /></div>
+          <span>edgardovillalba.is-a.dev/DS-Time/</span><span>LIVE</span>
+        </div>
+        <div className="dstime-screen"><video src={src} autoPlay muted loop playsInline preload="metadata" /></div>
+        <div className="dstime-browser-footer"><span>SYS // DST-02</span><span>{online}</span></div>
+      </div>
     </div>
   )
 }
