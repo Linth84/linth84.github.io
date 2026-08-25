@@ -691,19 +691,22 @@
 
 @media (max-width: 600px) {
   .hero-description {
-    width: min(88vw, 420px);
+    display: block;
 
-    margin-left: auto;
-    margin-right: auto;
+    width: min(86vw, 390px);
 
-    font-size: 15px;
-    line-height: 1.6;
+    font-size: 14px;
+    line-height: 1.65;
 
     text-align: center;
   }
 
   .hero-description span {
-    display: block;
+    display: inline;
+  }
+
+  .hero-description span + span::before {
+    content: " ";
   }
 }
 
