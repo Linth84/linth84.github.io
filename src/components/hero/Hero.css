@@ -704,10 +704,6 @@
   .hero-description span {
     display: inline;
   }
-
-  .hero-description span + span::before {
-    content: " ";
-  }
 }
 
 

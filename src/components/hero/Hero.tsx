@@ -119,6 +119,7 @@ export default function Hero() {
 
         <p className="hero-description">
           <span>{hero.descriptionLine1}</span>
+          {' '}
           <span>{hero.descriptionLine2}</span>
         </p>
 
