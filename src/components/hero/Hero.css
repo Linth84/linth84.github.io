@@ -689,6 +689,24 @@
   max-width: 760px;
 }
 
+@media (max-width: 600px) {
+  .hero-description {
+    width: min(88vw, 420px);
+
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: 15px;
+    line-height: 1.6;
+
+    text-align: center;
+  }
+
+  .hero-description span {
+    display: block;
+  }
+}
+
 
 /* =========================================================
    ACTION BUTTONS

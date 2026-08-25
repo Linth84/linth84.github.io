@@ -118,9 +118,8 @@ export default function Hero() {
         </div>
 
         <p className="hero-description">
-          {hero.descriptionLine1}
-          <br />
-          {hero.descriptionLine2}
+          <span>{hero.descriptionLine1}</span>
+          <span>{hero.descriptionLine2}</span>
         </p>
 
         <div className="hero-actions">
