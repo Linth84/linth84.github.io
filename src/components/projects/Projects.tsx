@@ -166,13 +166,13 @@ export default function Projects() {
       <div className="project-section mobile-project project-fip">
         <div className="projects-heading">
           <span>{projects.fip.archive}</span>
-          <span>{projects.common.mobileApplication}</span>
+          <span>{projects.fip.platform}</span>
         </div>
 
         <article className="mobile-project-layout">
           <div className="project-info">
             <div className="project-index">
-              <span>04</span>
+              <span>03</span>
               <span>{projects.fip.type}</span>
             </div>
 
@@ -187,9 +187,10 @@ export default function Projects() {
             </p>
 
             <div className="project-stack">
+              <span>WEB</span>
               <span>ANDROID</span>
               <span>JAVASCRIPT</span>
-              <span>MOBILE</span>
+              <span>RESPONSIVE</span>
             </div>
 
             <div className="project-actions">
@@ -210,6 +211,17 @@ export default function Projects() {
                 {language === 'es'
                   ? 'VER EN GOOGLE PLAY'
                   : 'VIEW ON GOOGLE PLAY'}
+              </a>
+
+              <a
+                href="https://edgardovillalba.is-a.dev/pif-tracker-web/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-secondary"
+              >
+                {language === 'es'
+                  ? 'ABRIR VERSIÓN WEB'
+                  : 'OPEN WEB APP'}
               </a>
             </div>
           </div>
@@ -237,7 +249,7 @@ export default function Projects() {
         <article className="mobile-project-layout mobile-project-reverse">
           <div className="project-info">
             <div className="project-index">
-              <span>03</span>
+              <span>04</span>
               <span>{projects.soothe.type}</span>
             </div>
 

@@ -11,10 +11,29 @@ export default function PifTrackerCaseStudy() {
 
   const study = t.caseStudies.pif
 
+  const pifPlayStoreUrl =
+    language === 'es'
+      ? 'https://play.google.com/store/apps/details?id=com.linthapps.piftracker&hl=es_AR'
+      : 'https://play.google.com/store/apps/details?id=com.linthapps.piftracker&hl=en'
+
+  const pifWebUrl =
+    'https://edgardovillalba.is-a.dev/pif-tracker-web/'
+
+  const pifGithubUrl =
+    'https://github.com/Linth84/pif-tracker-web'
+
+  const screenshots = [
+    'calculator.png',
+    'daily-log.png',
+    'evolution.png',
+    'tracking.png',
+    'treatment-days.png',
+  ]
+
   return (
     <main className="case-study case-study-mobile">
       {/* =====================================================
-          HERO
+          HERO // PROJECT 03
           ===================================================== */}
 
       <section className="case-hero case-hero-mobile">
@@ -33,14 +52,14 @@ export default function PifTrackerCaseStudy() {
                 LANG // {language.toUpperCase()}
               </button>
 
-              <span>PROJECT // 02</span>
+              <span>PROJECT // 03</span>
             </div>
           </div>
 
           <div className="case-hero-grid case-mobile-hero-grid">
             <div className="case-hero-copy">
               <div className="case-index">
-                <span>02</span>
+                <span>03</span>
                 <span>{study.type}</span>
               </div>
 
@@ -67,16 +86,27 @@ export default function PifTrackerCaseStudy() {
 
                 <a
                   className="case-secondary"
-                  href="#stack"
+                  href={pifWebUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  {study.stackAction}
+                  {study.liveDemo} ↗
+                </a>
+
+                <a
+                  className="case-secondary"
+                  href={pifPlayStoreUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {study.playStore} ↗
                 </a>
               </div>
             </div>
 
             <div className="case-phone-showcase">
               <div className="case-phone-telemetry">
-                <span>DEVICE // 02</span>
+                <span>DEVICE // 03</span>
                 <span>{study.system}</span>
               </div>
 
@@ -102,31 +132,27 @@ export default function PifTrackerCaseStudy() {
 
           <div className="case-metrics case-mobile-metrics">
             <Metric
-              value="01"
-              label={study.metrics.calculator}
+              value="84 + 84"
+              label={study.metrics.cycle}
             />
 
             <Metric
               value="02"
-              label={study.metrics.log}
+              label={study.metrics.charts}
             />
 
             <Metric
-              value="03"
-              label={study.metrics.followup}
+              value="WEB + ANDROID"
+              label={study.metrics.platforms}
             />
 
             <Metric
-              value="EN / ES"
+              value="ES / EN"
               label={study.metrics.languages}
             />
           </div>
         </div>
       </section>
-
-      {/* =====================================================
-          OVERVIEW
-          ===================================================== */}
 
       <CaseSection
         id="overview"
@@ -139,10 +165,6 @@ export default function PifTrackerCaseStudy() {
           <p>{study.sections.overview.p2}</p>
         </div>
       </CaseSection>
-
-      {/* =====================================================
-          WHY IT EXISTS
-          ===================================================== */}
 
       <CaseSection
         index="02"
@@ -162,10 +184,6 @@ export default function PifTrackerCaseStudy() {
         </div>
       </CaseSection>
 
-      {/* =====================================================
-          MY ROLE
-          ===================================================== */}
-
       <CaseSection
         index="03"
         eyebrow={study.sections.role.eyebrow}
@@ -181,10 +199,6 @@ export default function PifTrackerCaseStudy() {
           </div>
         </div>
       </CaseSection>
-
-      {/* =====================================================
-          FEATURES
-          ===================================================== */}
 
       <CaseSection
         index="04"
@@ -208,10 +222,6 @@ export default function PifTrackerCaseStudy() {
         </div>
       </CaseSection>
 
-      {/* =====================================================
-          MOBILE EXPERIENCE
-          ===================================================== */}
-
       <CaseSection
         index="05"
         eyebrow={study.sections.experience.eyebrow}
@@ -222,10 +232,12 @@ export default function PifTrackerCaseStudy() {
             <p>{study.sections.experience.body}</p>
 
             <div className="case-role-tags">
-              <span>CALCULATOR</span>
-              <span>LOG</span>
-              <span>FOLLOW-UP</span>
-              <span>EN / ES</span>
+              <span>84 + 84</span>
+              <span>WEIGHT</span>
+              <span>WELLNESS</span>
+              <span>ES / EN</span>
+              <span>KG / LB</span>
+              <span>WEB + ANDROID</span>
             </div>
           </div>
 
@@ -246,24 +258,56 @@ export default function PifTrackerCaseStudy() {
         </div>
       </CaseSection>
 
-      {/* =====================================================
-          STACK
-          ===================================================== */}
+      <CaseSection
+        index="06"
+        eyebrow={study.sections.gallery.eyebrow}
+        title={study.sections.gallery.title}
+      >
+        <div className="case-pif-gallery">
+          {screenshots.map((image, index) => (
+            <figure className="case-pif-shot" key={image}>
+              <div className="case-pif-shot-header">
+                <div>
+                  <span className="case-live-dot" />
+                  <span>PIF TRACKER // WEB</span>
+                </div>
+
+                <span>
+                  VIEW // {String(index + 1).padStart(2, '0')}
+                </span>
+              </div>
+
+              <div className="case-pif-shot-frame">
+                <img
+                  src={`/images/pif-tracker/${image}`}
+                  alt={`PIF Tracker interface screenshot ${index + 1}`}
+                  loading="lazy"
+                />
+              </div>
+
+              <div className="case-pif-shot-footer">
+                <span>SYS // PIF-03</span>
+                <span>CAPTURE // LIVE APP</span>
+              </div>
+            </figure>
+          ))}
+        </div>
+      </CaseSection>
 
       <CaseSection
         id="stack"
-        index="06"
+        index="07"
         eyebrow={study.sections.stack.eyebrow}
         title={study.sections.stack.title}
       >
         <div className="case-stack-grid case-stack-grid-mobile">
           {[
-            'ANDROID',
             'JAVASCRIPT',
             'HTML',
             'CSS',
-            'ANDROID STUDIO',
-            'MOBILE',
+            'LOCAL STORAGE',
+            'ANDROID',
+            'RESPONSIVE UI',
           ].map((item, index) => (
             <div className="case-stack-node" key={item}>
               <span>
@@ -276,12 +320,8 @@ export default function PifTrackerCaseStudy() {
         </div>
       </CaseSection>
 
-      {/* =====================================================
-          LEARNINGS
-          ===================================================== */}
-
       <CaseSection
-        index="07"
+        index="08"
         eyebrow={study.sections.learnings.eyebrow}
         title={study.sections.learnings.title}
       >
@@ -291,25 +331,44 @@ export default function PifTrackerCaseStudy() {
         </div>
       </CaseSection>
 
-      {/* =====================================================
-          FOOTER
-          ===================================================== */}
-
       <section className="case-footer">
         <div className="case-shell">
-          <span>END // PROJECT 02</span>
+          <span>END // PROJECT 03</span>
 
           <h2>{study.footerTitle}</h2>
 
           <div className="case-actions">
-            <Link to="/" className="case-primary">
-              {study.back}
+            <a
+              href={pifWebUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="case-primary"
+            >
+              {study.liveDemo}
               <span>↗</span>
-            </Link>
+            </a>
 
-            <a href="#" className="case-secondary">
+            <a
+              href={pifPlayStoreUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="case-secondary"
+            >
+              {study.playStore}
+            </a>
+
+            <a
+              href={pifGithubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="case-secondary"
+            >
               GITHUB
             </a>
+
+            <Link to="/" className="case-secondary">
+              {study.back}
+            </Link>
           </div>
         </div>
       </section>

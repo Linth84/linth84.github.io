@@ -122,11 +122,12 @@ export const translations = {
 
       fip: {
         archive: 'PROJECT ARCHIVE // 03',
-        type: 'MOBILE / HEALTH TRACKING',
+        type: 'WEB + ANDROID / FIP TRACKING',
+        platform: 'WEB + ANDROID APPLICATION',
         title: 'FIP Tracker',
-        tagline: 'Supporting cats through FIP treatment.',
+        tagline: 'Every day counts.',
         description:
-          'A mobile application designed to support the treatment of Feline Infectious Peritonitis (FIP), a potentially fatal disease in cats. It helps caregivers calculate medication doses, track treatment progress and keep essential information organized throughout the recovery journey.',
+          'A Web and Android companion built around a real treatment workflow: estimated dose calculation, daily weight and wellness records, evolution charts, and structured tracking across 84 days of treatment + 84 days of observation.',
         system: 'FIP TRACKER',
       },
 
@@ -398,121 +399,128 @@ export const translations = {
 
       pif: {
         back: 'BACK TO PORTFOLIO',
-        type: 'MOBILE / HEALTH TRACKING',
+        type: 'WEB + ANDROID / FIP TRACKING',
         title: 'FIP Tracker',
-        tagline: 'Supporting cats through FIP treatment.',
+        tagline: 'Every day counts.',
         lead:
-          'A mobile companion created to make Feline Infectious Peritonitis treatment information easier to calculate, record and follow over time.',
+          'A Web and Android companion built to reduce day-to-day friction during a long FIP treatment journey by keeping calculation, records, visual trends and the 84 + 84 follow-up in one place.',
         explore: 'EXPLORE CASE STUDY',
         stackAction: 'VIEW TECH STACK',
+        liveDemo: 'OPEN WEB APP',
+        playStore: 'GOOGLE PLAY',
         system: 'FIP TRACKER',
-        mobileOnline: 'MOBILE SYSTEM // ONLINE',
+        mobileOnline: 'WEB + MOBILE SYSTEM // ONLINE',
 
         metrics: {
-          calculator: 'DOSE CALCULATOR',
-          log: 'TREATMENT LOG',
-          followup: 'FOLLOW-UP',
+          cycle: 'TREATMENT + OBSERVATION',
+          charts: 'EVOLUTION CHARTS',
+          platforms: 'PLATFORMS',
           languages: 'LANGUAGES',
         },
 
         sections: {
           overview: {
             eyebrow: 'PROJECT OVERVIEW',
-            title: 'A practical tool for a demanding treatment journey.',
+            title: 'A practical tool built around a real recurring need.',
             p1:
-              'FIP Tracker is a personal mobile project designed around the day-to-day organization required during treatment for Feline Infectious Peritonitis. The goal is not to replace veterinary guidance, but to help caregivers keep important treatment information structured and accessible.',
+              'FIP Tracker was created to make a long treatment process easier to organize day by day. Instead of splitting information between notes, manual calculations and separate reminders, the application keeps the main tracking workflow together in one focused interface.',
             p2:
-              'The application brings together dose calculation, administration records and follow-up tools in a mobile interface built for repeated use throughout the treatment process.',
+              'The current Web and Android versions combine estimated dose calculation, daily weight and wellness records, editable history, visual evolution charts and structured tracking for 84 days of treatment followed by 84 days of observation. The calculator is a support tool and does not replace veterinary guidance.',
           },
 
           problem: {
-            eyebrow: 'WHY IT EXISTS',
-            title: 'Reducing friction around treatment information.',
-            contextLabel: 'THE CONTEXT',
+            eyebrow: 'PROBLEM / SOLUTION',
+            title: 'Turning a long sequence of daily tasks into one clear workflow.',
+            contextLabel: 'THE PROBLEM',
             solutionLabel: 'THE SOLUTION',
             context:
-              'FIP treatment can involve repeated calculations, changes in weight, different medication concentrations and a long sequence of administrations. Keeping those details organized manually can become difficult.',
+              'FIP treatment can require repeated calculations, changing weight, different medication concentrations, daily notes and a long sequence of administrations. When that information is scattered, keeping a consistent record becomes harder over time.',
             solution:
-              'FIP Tracker centralizes the core workflow in one place: calculate an estimated dose from treatment parameters, record administrations and maintain follow-up information in a simple mobile experience.',
+              'FIP Tracker centralizes the recurring tasks: calculate an estimated dose from treatment parameters, record weight and administered dose, capture daily wellness, visualize trends and follow progress through the complete 84 + 84 journey.',
           },
 
           role: {
             eyebrow: 'MY ROLE',
-            title: 'A personal project built end to end.',
+            title: 'A personal product designed and developed end to end.',
             body:
-              'I designed and developed FIP Tracker as a personal mobile application, working across the interface, treatment-oriented calculation flow, multilingual experience and the organization of the information presented to the user.',
+              'I designed and developed FIP Tracker as a personal project, working on the treatment-oriented calculation flow, responsive Web experience, Android version, multilingual interface, persistent records, wellness tracking and the visualization of data over time.',
             tags: [
               'PERSONAL PROJECT',
-              'MOBILE',
-              'ANDROID',
+              'WEB + ANDROID',
               'JAVASCRIPT',
-              'UX',
-              'MULTILANGUAGE',
+              'RESPONSIVE UI',
+              'DATA VISUALIZATION',
+              'I18N',
             ],
           },
 
           features: {
             eyebrow: 'KEY FEATURES',
-            title: 'The essential treatment workflow in one mobile tool.',
+            title: 'The essential daily workflow in one place.',
           },
 
           experience: {
-            eyebrow: 'MOBILE EXPERIENCE',
-            title: 'Designed for repeated, practical use.',
+            eyebrow: 'PRODUCT EXPERIENCE',
+            title: 'Designed to be checked quickly, every day.',
             body:
-              'The interface keeps the calculator, log and follow-up areas close together so the user can move between treatment tasks without navigating through a complex app structure.',
+              'The interface keeps the calculator, daily log, evolution and 84 + 84 follow-up close together. The Web version adapts to mobile screens while preserving an app-like experience, and the Android version keeps the same core workflow on the phone.',
+          },
+
+          gallery: {
+            eyebrow: 'REAL INTERFACE',
+            title: 'The current Web experience in use.',
           },
 
           stack: {
             eyebrow: 'TECH STACK',
-            title: 'A lightweight mobile stack focused on usability.',
+            title: 'A lightweight stack shared across Web and Android.',
           },
 
           learnings: {
             eyebrow: 'CHALLENGES / LEARNINGS',
-            title: 'Building around clarity, not complexity.',
+            title: 'Useful software starts with the recurring problem, not the feature list.',
             p1:
-              'The project required translating treatment-related inputs into a flow that remains understandable on a small screen. Clear labels, structured forms and predictable navigation became more important than adding unnecessary interface complexity.',
+              'The project evolved from a focused calculator into a broader tracking tool. Adding daily wellness and evolution charts reinforced the importance of preserving old records while extending the data model without breaking the existing experience.',
             p2:
-              'It reinforced the value of designing software around a real recurring task: the best feature is often the one that removes a small piece of friction every time the app is opened.',
+              'Supporting Spanish and English also required more than translating labels: weight input, history and charts now adapt between kilograms and pounds while keeping stored data normalized internally.',
           },
         },
 
         features: [
           {
-            title: 'Dose Calculator',
+            title: 'Estimated Dose Calculator',
             description:
-              'A structured calculator based on treatment parameters such as FIP type, medication concentration and the cat’s current weight.',
+              'A structured calculator using treatment parameters such as administration method, FIP type, medication concentration and the cat’s current weight.',
           },
           {
-            title: 'Administration Log',
+            title: 'Daily Log & Wellness',
             description:
-              'A dedicated area for keeping treatment administrations organized instead of relying on scattered notes.',
+              'Record date, weight, administered dose, notes and a simple daily wellness state: Good, So-so or Bad.',
           },
           {
-            title: 'Treatment Follow-up',
+            title: 'Weight & Wellness Evolution',
             description:
-              'Follow-up tools help keep relevant information available throughout the treatment process.',
+              'Saved records feed two line charts that make changes in weight and perceived daily wellness easier to review over time.',
           },
           {
-            title: 'Weight-aware Workflow',
+            title: '84 + 84 Follow-up',
             description:
-              'Current weight is part of the calculation flow, reflecting an input that can change over the course of treatment.',
+              'Track the current phase, day of the phase, total day, overall progress and individual treatment days across 84 days of treatment and 84 days of observation.',
           },
           {
-            title: 'Multilanguage Interface',
+            title: 'Bilingual Units & Interface',
             description:
-              'The application supports English and Spanish to make the experience accessible to a broader group of caregivers.',
+              'Spanish uses kilograms while English uses pounds. Values are converted for display while stored weight data remains normalized internally.',
           },
           {
-            title: 'Mobile-first Experience',
+            title: 'Web + Android',
             description:
-              'The interface is designed around direct access to the core treatment tools from a phone.',
+              'The project is available as a responsive Web application and as an Android application built around the same core tracking workflow.',
           },
         ],
 
         footerTitle:
-          'A focused mobile tool built around a real-world treatment workflow.',
+          'Built to make a long treatment journey easier to organize, one day at a time.',
       },
 
       soothe: {
@@ -766,11 +774,12 @@ export const translations = {
 
       fip: {
         archive: 'ARCHIVO DE PROYECTO // 03',
-        type: 'MÓVIL / SEGUIMIENTO DE SALUD',
+        type: 'WEB + ANDROID / SEGUIMIENTO PIF',
+        platform: 'APLICACIÓN WEB + ANDROID',
         title: 'PIF Tracker',
-        tagline: 'Acompañando a los gatos durante el tratamiento de la PIF.',
+        tagline: 'Cada día cuenta.',
         description:
-          'Una aplicación móvil diseñada para acompañar el tratamiento de la Peritonitis Infecciosa Felina (PIF), una enfermedad potencialmente mortal en gatos. Ayuda a calcular dosis de medicación, seguir el progreso del tratamiento y mantener organizada la información esencial durante la recuperación.',
+          'Una herramienta Web y Android creada alrededor de una necesidad real: centralizar el cálculo estimado de dosis, el registro diario de peso y bienestar, los gráficos de evolución y el seguimiento de 84 días de tratamiento + 84 días de observación.',
         system: 'PIF TRACKER',
       },
 
@@ -1042,121 +1051,128 @@ export const translations = {
 
       pif: {
         back: 'VOLVER AL PORTFOLIO',
-        type: 'MÓVIL / SEGUIMIENTO DE SALUD',
+        type: 'WEB + ANDROID / SEGUIMIENTO PIF',
         title: 'PIF Tracker',
-        tagline: 'Acompañando a los gatos durante el tratamiento de la PIF.',
+        tagline: 'Cada día cuenta.',
         lead:
-          'Una aplicación móvil creada para hacer más sencillo calcular, registrar y seguir información relacionada con el tratamiento de la Peritonitis Infecciosa Felina.',
+          'Una herramienta Web y Android creada para reducir la fricción cotidiana de un tratamiento prolongado, reuniendo cálculo, registros, evolución visual y seguimiento 84 + 84 en un solo lugar.',
         explore: 'EXPLORAR CASO DE ESTUDIO',
         stackAction: 'VER STACK TECNOLÓGICO',
+        liveDemo: 'ABRIR VERSIÓN WEB',
+        playStore: 'GOOGLE PLAY',
         system: 'PIF TRACKER',
-        mobileOnline: 'SISTEMA MÓVIL // ONLINE',
+        mobileOnline: 'SISTEMA WEB + MÓVIL // ONLINE',
 
         metrics: {
-          calculator: 'CALCULADORA DE DOSIS',
-          log: 'REGISTRO DE TRATAMIENTO',
-          followup: 'SEGUIMIENTO',
+          cycle: 'TRATAMIENTO + OBSERVACIÓN',
+          charts: 'GRÁFICOS DE EVOLUCIÓN',
+          platforms: 'PLATAFORMAS',
           languages: 'IDIOMAS',
         },
 
         sections: {
           overview: {
             eyebrow: 'RESUMEN DEL PROYECTO',
-            title: 'Una herramienta práctica para un tratamiento exigente.',
+            title: 'Una herramienta práctica construida alrededor de una necesidad real y recurrente.',
             p1:
-              'PIF Tracker es un proyecto móvil personal diseñado alrededor de la organización cotidiana que requiere el tratamiento de la Peritonitis Infecciosa Felina. Su objetivo no es reemplazar la orientación veterinaria, sino ayudar a mantener información importante del tratamiento estructurada y accesible.',
+              'PIF Tracker nació para hacer más sencillo organizar un tratamiento prolongado día a día. En lugar de repartir la información entre notas, cálculos manuales y recordatorios separados, la aplicación reúne el flujo principal de seguimiento dentro de una interfaz enfocada.',
             p2:
-              'La aplicación reúne cálculo de dosis, registro de administraciones y herramientas de seguimiento dentro de una interfaz móvil pensada para utilizarse repetidamente durante el proceso.',
+              'Las versiones Web y Android actuales combinan cálculo estimado de dosis, registros diarios de peso y bienestar, historial editable, gráficos de evolución y seguimiento estructurado de 84 días de tratamiento seguidos por 84 días de observación. La calculadora es una herramienta de apoyo y no reemplaza la orientación veterinaria.',
           },
 
           problem: {
-            eyebrow: 'POR QUÉ EXISTE',
-            title: 'Reducir fricción alrededor de la información del tratamiento.',
-            contextLabel: 'EL CONTEXTO',
+            eyebrow: 'PROBLEMA / SOLUCIÓN',
+            title: 'Convertir una larga secuencia de tareas diarias en un flujo claro.',
+            contextLabel: 'EL PROBLEMA',
             solutionLabel: 'LA SOLUCIÓN',
             context:
-              'El tratamiento de la PIF puede implicar cálculos repetidos, cambios de peso, distintas concentraciones de medicación y una larga secuencia de administraciones. Mantener todo eso organizado manualmente puede resultar difícil.',
+              'El tratamiento de la PIF puede requerir cálculos repetidos, cambios de peso, distintas concentraciones de medicación, notas diarias y una larga secuencia de administraciones. Cuando esa información queda dispersa, mantener un registro consistente se vuelve más difícil con el paso del tiempo.',
             solution:
-              'PIF Tracker centraliza el flujo principal en un mismo lugar: calcular una dosis estimada a partir de parámetros del tratamiento, registrar administraciones y mantener información de seguimiento en una experiencia móvil simple.',
+              'PIF Tracker centraliza las tareas recurrentes: calcular una dosis estimada a partir de los parámetros del tratamiento, registrar peso y dosis administrada, guardar el bienestar diario, visualizar tendencias y seguir el progreso durante todo el recorrido 84 + 84.',
           },
 
           role: {
             eyebrow: 'MI ROL',
-            title: 'Un proyecto personal construido de punta a punta.',
+            title: 'Un producto personal diseñado y desarrollado de punta a punta.',
             body:
-              'Diseñé y desarrollé PIF Tracker como una aplicación móvil personal, trabajando sobre la interfaz, el flujo de cálculo orientado al tratamiento, la experiencia multilenguaje y la organización de la información presentada al usuario.',
+              'Diseñé y desarrollé PIF Tracker como proyecto personal, trabajando sobre el flujo de cálculo orientado al tratamiento, la experiencia Web responsive, la versión Android, la interfaz bilingüe, la persistencia de registros, el seguimiento de bienestar y la visualización de datos a lo largo del tiempo.',
             tags: [
               'PROYECTO PERSONAL',
-              'MÓVIL',
-              'ANDROID',
+              'WEB + ANDROID',
               'JAVASCRIPT',
-              'UX',
-              'MULTILENGUAJE',
+              'UI RESPONSIVE',
+              'VISUALIZACIÓN DE DATOS',
+              'I18N',
             ],
           },
 
           features: {
             eyebrow: 'FUNCIONALIDADES PRINCIPALES',
-            title: 'El flujo esencial del tratamiento en una sola herramienta móvil.',
+            title: 'El flujo diario esencial en un solo lugar.',
           },
 
           experience: {
-            eyebrow: 'EXPERIENCIA MÓVIL',
-            title: 'Diseñada para un uso práctico y repetido.',
+            eyebrow: 'EXPERIENCIA DEL PRODUCTO',
+            title: 'Diseñada para consultarse rápido, todos los días.',
             body:
-              'La interfaz mantiene cerca la calculadora, el registro y el seguimiento para que el usuario pueda pasar entre las tareas del tratamiento sin navegar por una estructura compleja.',
+              'La interfaz mantiene cerca la calculadora, el registro diario, la evolución y el seguimiento 84 + 84. La versión Web se adapta a pantallas móviles conservando una experiencia tipo app, mientras que la versión Android mantiene el mismo flujo principal desde el teléfono.',
+          },
+
+          gallery: {
+            eyebrow: 'INTERFAZ REAL',
+            title: 'La experiencia Web actual en uso.',
           },
 
           stack: {
             eyebrow: 'STACK TECNOLÓGICO',
-            title: 'Un stack móvil liviano enfocado en usabilidad.',
+            title: 'Un stack liviano compartido entre Web y Android.',
           },
 
           learnings: {
             eyebrow: 'DESAFÍOS / APRENDIZAJES',
-            title: 'Construir alrededor de la claridad y no de la complejidad.',
+            title: 'El software útil empieza por el problema recurrente, no por la lista de funciones.',
             p1:
-              'El proyecto exigió transformar entradas relacionadas con el tratamiento en un flujo comprensible dentro de una pantalla pequeña. Etiquetas claras, formularios estructurados y navegación predecible fueron más importantes que sumar complejidad visual innecesaria.',
+              'El proyecto evolucionó desde una calculadora enfocada hacia una herramienta de seguimiento más completa. Incorporar bienestar diario y gráficos de evolución reforzó la importancia de conservar los registros anteriores mientras se amplía el modelo de datos sin romper la experiencia existente.',
             p2:
-              'Reforzó el valor de diseñar software alrededor de una tarea real y repetitiva: muchas veces la mejor funcionalidad es la que elimina una pequeña fricción cada vez que se abre la aplicación.',
+              'Dar soporte a español e inglés también exigió algo más que traducir etiquetas: el ingreso de peso, el historial y los gráficos se adaptan entre kilogramos y libras manteniendo los datos almacenados normalizados internamente.',
           },
         },
 
         features: [
           {
-            title: 'Calculadora de Dosis',
+            title: 'Calculadora de Dosis Estimada',
             description:
-              'Una calculadora estructurada a partir de parámetros como tipo de PIF, concentración de la medicación y peso actual del gato.',
+              'Una calculadora estructurada con parámetros como forma de administración, tipo de PIF, concentración de la medicación y peso actual del gato.',
           },
           {
-            title: 'Registro de Administraciones',
+            title: 'Registro Diario y Bienestar',
             description:
-              'Un espacio dedicado para mantener organizadas las administraciones del tratamiento en lugar de depender de notas dispersas.',
+              'Permite registrar fecha, peso, dosis administrada, comentarios y un estado simple de bienestar diario: Bien, Más o menos o Mal.',
           },
           {
-            title: 'Seguimiento del Tratamiento',
+            title: 'Evolución de Peso y Bienestar',
             description:
-              'Herramientas de seguimiento ayudan a mantener información relevante disponible durante todo el proceso.',
+              'Los registros guardados alimentan dos gráficos de líneas que facilitan revisar los cambios de peso y del bienestar percibido a lo largo del tiempo.',
           },
           {
-            title: 'Flujo Basado en el Peso',
+            title: 'Seguimiento 84 + 84',
             description:
-              'El peso actual forma parte del cálculo, reflejando un dato que puede modificarse a lo largo del tratamiento.',
+              'Muestra fase actual, día de la fase, día total, progreso general y cada jornada del proceso durante 84 días de tratamiento y 84 días de observación.',
           },
           {
-            title: 'Interfaz Multilenguaje',
+            title: 'Interfaz Bilingüe y Unidades',
             description:
-              'La aplicación soporta inglés y español para hacer la experiencia accesible a un grupo más amplio de cuidadores.',
+              'En español utiliza kilogramos y en inglés libras. Los valores se convierten para mostrarse mientras el peso almacenado se mantiene normalizado internamente.',
           },
           {
-            title: 'Experiencia Mobile-first',
+            title: 'Web + Android',
             description:
-              'La interfaz está pensada para acceder de forma directa a las herramientas principales del tratamiento desde el teléfono.',
+              'El proyecto está disponible como aplicación Web responsive y como aplicación Android, ambas construidas alrededor del mismo flujo principal de seguimiento.',
           },
         ],
 
         footerTitle:
-          'Una herramienta móvil enfocada en un flujo de tratamiento real.',
+          'Construida para hacer más sencillo organizar un tratamiento prolongado, un día a la vez.',
       },
 
       soothe: {
