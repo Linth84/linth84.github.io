@@ -1,0 +1,77 @@
+EDGARDO VILLALBA PORTFOLIO — SEO / SOCIAL PREVIEW UPDATE
+=========================================================
+
+WHAT WAS ADDED
+--------------
+1. public/portfolio-card.png
+   - Exact 1200 x 630 capture of the real portfolio hero.
+   - Used by Open Graph and X/Twitter social previews.
+
+2. index.html
+   - Descriptive <title> and meta description.
+   - Canonical URL.
+   - robots directive.
+   - Open Graph metadata for Discord / WhatsApp / LinkedIn / Facebook.
+   - X/Twitter card metadata.
+   - Person + WebSite JSON-LD structured data.
+   - Single favicon declaration (duplicate removed).
+
+3. public/robots.txt
+   - Allows crawling and points search engines to sitemap.xml.
+
+4. public/sitemap.xml
+   - Home page.
+   - FinSightAI case study.
+   - DS-Time case study.
+   - PIF Tracker case study.
+   - SootheWaveApp case study.
+
+5. src/App.tsx
+   - Route-aware and language-aware title / description / canonical metadata.
+   - Updates EN / ES metadata after React loads.
+
+6. src/i18n/LanguageContext.tsx
+   - It already updated <html lang="en|es"> when switching language.
+   - Kept as-is because it was already correct.
+
+7. scripts/postbuild-seo.mjs
+   - After Vite builds, creates real /projects/.../index.html entry files.
+   - This makes direct case-study URLs work better on static hosting and gives
+     every project its own static title, description and canonical URL.
+
+8. package.json
+   - npm run build now runs the SEO post-build step automatically.
+
+LOCAL TEST
+----------
+npm install
+npm run dev
+
+PRODUCTION BUILD
+----------------
+npm run build
+
+IMPORTANT
+---------
+The included dist/ folder is the previous build. Run `npm run build` before
+publishing so dist contains the new metadata, social card and static project
+route entry files.
+
+AFTER DEPLOY
+------------
+1. Confirm these URLs open publicly:
+   https://edgardovillalba.is-a.dev/portfolio-card.png
+   https://edgardovillalba.is-a.dev/robots.txt
+   https://edgardovillalba.is-a.dev/sitemap.xml
+
+2. Test direct project URLs in a private/incognito window.
+
+3. Add the site to Google Search Console.
+
+4. Submit:
+   https://edgardovillalba.is-a.dev/sitemap.xml
+
+5. Use URL Inspection to request indexing for the homepage and project pages.
+
+6. Discord / WhatsApp may cache old previews. During testing use a temporary
+   query parameter such as ?preview=2.

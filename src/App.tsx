@@ -19,6 +19,7 @@ import FinSightCaseStudy from './pages/FinSightCaseStudy'
 import PifTrackerCaseStudy from './pages/PifTrackerCaseStudy'
 import SootheWaveCaseStudy from './pages/SootheWaveCaseStudy'
 import DSTimeCaseStudy from './pages/DSTimeCaseStudy'
+import { useLanguage } from './i18n/LanguageContext'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -400,6 +401,132 @@ function Home() {
 }
 
 
+
+
+/* =========================================================
+   SEO SYNC
+
+   The base index.html contains crawlable metadata for the
+   portfolio homepage. This component keeps document metadata
+   aligned with the active route and selected language after
+   React has loaded.
+   ========================================================= */
+
+function SeoSync() {
+  const { pathname } = useLocation()
+  const { language } = useLanguage()
+
+  useEffect(() => {
+    const site = 'https://edgardovillalba.is-a.dev'
+
+    const seoByRoute = {
+      '/': {
+        en: {
+          title: 'Edgardo Villalba | Developer · AI · Data',
+          description:
+            'Portfolio of Edgardo Villalba, a developer focused on web development, artificial intelligence, data and practical digital products built around real-world problems.',
+        },
+        es: {
+          title: 'Edgardo Villalba | Desarrollo · IA · Datos',
+          description:
+            'Portfolio de Edgardo Villalba, desarrollador enfocado en desarrollo web, inteligencia artificial, datos y productos digitales prácticos construidos alrededor de problemas reales.',
+        },
+      },
+      '/projects/finsightai': {
+        en: {
+          title: 'FinSightAI | Edgardo Villalba',
+          description:
+            'Case study of FinSightAI, a financial intelligence platform combining web development, data, machine learning and contextual AI.',
+        },
+        es: {
+          title: 'FinSightAI | Edgardo Villalba',
+          description:
+            'Caso de estudio de FinSightAI, una plataforma de inteligencia financiera que combina desarrollo web, datos, machine learning e IA contextual.',
+        },
+      },
+      '/projects/ds-time': {
+        en: {
+          title: 'DS-Time | Edgardo Villalba',
+          description:
+            'Case study of DS-Time, a multilingual Discord timestamp generator designed to simplify scheduling across time zones.',
+        },
+        es: {
+          title: 'DS-Time | Edgardo Villalba',
+          description:
+            'Caso de estudio de DS-Time, un generador multilingüe de timestamps de Discord diseñado para simplificar la coordinación entre zonas horarias.',
+        },
+      },
+      '/projects/pif-tracker': {
+        en: {
+          title: 'PIF Tracker | Edgardo Villalba',
+          description:
+            'Case study of PIF Tracker, a Web and Android app for organizing daily FIP treatment tracking, weight, wellness and the 84 + 84 journey.',
+        },
+        es: {
+          title: 'PIF Tracker | Edgardo Villalba',
+          description:
+            'Caso de estudio de PIF Tracker, una app Web y Android para organizar el seguimiento diario del tratamiento de la PIF, peso, bienestar y el proceso 84 + 84.',
+        },
+      },
+      '/projects/soothewave': {
+        en: {
+          title: 'SootheWaveApp | Edgardo Villalba',
+          description:
+            'Case study of SootheWaveApp, a mobile wellness experience focused on guided relaxation and a calm, low-friction interface.',
+        },
+        es: {
+          title: 'SootheWaveApp | Edgardo Villalba',
+          description:
+            'Caso de estudio de SootheWaveApp, una experiencia móvil de bienestar enfocada en relajación guiada y una interfaz tranquila y simple.',
+        },
+      },
+    } as const
+
+    const routeSeo =
+      seoByRoute[pathname as keyof typeof seoByRoute] ??
+      seoByRoute['/']
+
+    const seo = routeSeo[language]
+    const canonicalUrl = `${site}${pathname === '/' ? '/' : pathname}`
+
+    document.title = seo.title
+
+    const setMeta = (
+      selector: string,
+      content: string,
+    ) => {
+      const element =
+        document.querySelector<HTMLMetaElement>(selector)
+
+      if (element) {
+        element.content = content
+      }
+    }
+
+    setMeta('meta[name="description"]', seo.description)
+    setMeta('meta[property="og:title"]', seo.title)
+    setMeta('meta[property="og:description"]', seo.description)
+    setMeta('meta[property="og:url"]', canonicalUrl)
+    setMeta('meta[name="twitter:title"]', seo.title)
+    setMeta('meta[name="twitter:description"]', seo.description)
+    setMeta(
+      'meta[property="og:locale"]',
+      language === 'es' ? 'es_AR' : 'en_US',
+    )
+
+    const canonical =
+      document.querySelector<HTMLLinkElement>(
+        'link[rel="canonical"]',
+      )
+
+    if (canonical) {
+      canonical.href = canonicalUrl
+    }
+  }, [language, pathname])
+
+  return null
+}
+
 function ScrollToTop() {
   const { pathname } = useLocation()
 
@@ -414,6 +541,7 @@ function AppRoutes() {
   return (
     <>
       <ScrollToTop />
+      <SeoSync />
       <SpaceEffects />
       <CustomCursor />
 
