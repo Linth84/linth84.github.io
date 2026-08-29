@@ -120,8 +120,19 @@ export const translations = {
         liveDemo: 'LIVE DEMO',
       },
 
-      fip: {
+      dungeon: {
         archive: 'PROJECT ARCHIVE // 03',
+        type: 'WEB APP / INTERACTIVE 3D',
+        title: 'Decision Dungeon',
+        tagline: 'Let fate decide.',
+        description:
+          'An interactive fantasy decision maker where custom choices are mapped to a real animated 3D D20, with bilingual UI, ambient audio and a Best of 3 duel mode.',
+        feed: 'DECISION DUNGEON // LIVE INTERFACE',
+        liveDemo: 'LIVE DEMO',
+      },
+
+      fip: {
+        archive: 'PROJECT ARCHIVE // 04',
         type: 'WEB + ANDROID / FIP TRACKING',
         platform: 'WEB + ANDROID APPLICATION',
         title: 'FIP Tracker',
@@ -132,7 +143,7 @@ export const translations = {
       },
 
       soothe: {
-        archive: 'PROJECT ARCHIVE // 04',
+        archive: 'PROJECT ARCHIVE // 05',
         type: 'MOBILE / WELLNESS',
         title: 'SootheWaveApp',
         tagline: 'A calmer digital space.',
@@ -772,8 +783,19 @@ export const translations = {
         liveDemo: 'DEMO EN VIVO',
       },
 
-      fip: {
+      dungeon: {
         archive: 'ARCHIVO DE PROYECTO // 03',
+        type: 'WEB APP / 3D INTERACTIVO',
+        title: 'Decision Dungeon',
+        tagline: 'Dejá que el destino decida.',
+        description:
+          'Un decisor interactivo de fantasía donde tus opciones se asignan a un D20 3D animado real, con interfaz bilingüe, audio ambiental y un modo de duelo al mejor de 3.',
+        feed: 'DECISION DUNGEON // INTERFAZ EN VIVO',
+        liveDemo: 'DEMO EN VIVO',
+      },
+
+      fip: {
+        archive: 'ARCHIVO DE PROYECTO // 04',
         type: 'WEB + ANDROID / SEGUIMIENTO PIF',
         platform: 'APLICACIÓN WEB + ANDROID',
         title: 'PIF Tracker',
@@ -784,7 +806,7 @@ export const translations = {
       },
 
       soothe: {
-        archive: 'ARCHIVO DE PROYECTO // 04',
+        archive: 'ARCHIVO DE PROYECTO // 05',
         type: 'MÓVIL / BIENESTAR',
         title: 'SootheWaveApp',
         tagline: 'Un espacio digital más tranquilo.',

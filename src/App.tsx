@@ -19,6 +19,7 @@ import FinSightCaseStudy from './pages/FinSightCaseStudy'
 import PifTrackerCaseStudy from './pages/PifTrackerCaseStudy'
 import SootheWaveCaseStudy from './pages/SootheWaveCaseStudy'
 import DSTimeCaseStudy from './pages/DSTimeCaseStudy'
+import DecisionDungeonCaseStudy from './pages/DecisionDungeonCaseStudy'
 import { useLanguage } from './i18n/LanguageContext'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -226,6 +227,14 @@ function Home() {
         },
       })
 
+
+      /* =========================
+         DECISION DUNGEON
+         ========================= */
+
+      gsap.from('.project-dungeon .projects-heading', { opacity: 0, y: 38, scrollTrigger: { trigger: '.project-dungeon', start: 'top 88%', end: 'top 68%', scrub: 1 } })
+      gsap.from('.project-dungeon .project-info', { opacity: 0, x: -95, scrollTrigger: { trigger: '.project-dungeon', start: 'top 82%', end: 'top 54%', scrub: 1 } })
+      gsap.from('.project-dungeon .dungeon-system', { opacity: 0, x: 110, y: 30, scale: 0.94, scrollTrigger: { trigger: '.project-dungeon', start: 'top 82%', end: 'top 48%', scrub: 1 } })
 
       /* =========================
          FIP TRACKER
@@ -456,6 +465,16 @@ function SeoSync() {
             'Caso de estudio de DS-Time, un generador multilingüe de timestamps de Discord diseñado para simplificar la coordinación entre zonas horarias.',
         },
       },
+      '/projects/decision-dungeon': {
+        en: {
+          title: 'Decision Dungeon | Edgardo Villalba',
+          description: 'Case study of Decision Dungeon, an interactive fantasy decision maker with a real animated 3D D20, bilingual UI, audio and Best of 3 mode.',
+        },
+        es: {
+          title: 'Decision Dungeon | Edgardo Villalba',
+          description: 'Caso de estudio de Decision Dungeon, un decisor interactivo de fantasía con D20 3D animado real, interfaz bilingüe, audio y modo Best of 3.',
+        },
+      },
       '/projects/pif-tracker': {
         en: {
           title: 'PIF Tracker | Edgardo Villalba',
@@ -557,6 +576,11 @@ function AppRoutes() {
          element={<DSTimeCaseStudy />} 
          />
 
+
+        <Route
+          path="/projects/decision-dungeon"
+          element={<DecisionDungeonCaseStudy />}
+        />
 
         <Route
           path="/projects/pif-tracker"

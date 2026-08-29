@@ -20,6 +20,11 @@ const pages = [
     description: 'Case study of DS-Time, a multilingual Discord timestamp generator designed to simplify scheduling across time zones.',
   },
   {
+    route: '/projects/decision-dungeon',
+    title: 'Decision Dungeon | Edgardo Villalba',
+    description: 'Case study of Decision Dungeon, an interactive fantasy decision maker with a real animated 3D D20, bilingual UI, audio and Best of 3 mode.',
+  },
+  {
     route: '/projects/pif-tracker',
     title: 'PIF Tracker | Edgardo Villalba',
     description: 'Case study of PIF Tracker, a Web and Android app for organizing daily FIP treatment tracking, weight, wellness and the 84 + 84 journey.',

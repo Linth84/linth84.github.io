@@ -160,7 +160,48 @@ export default function Projects() {
       </div>
 
       {/* =====================================================
-          PROJECT 03 // FIP / PIF TRACKER
+          PROJECT 03 // DECISION DUNGEON
+          ===================================================== */}
+
+      <div className="project-section project-dungeon">
+        <div className="projects-heading">
+          <span>{projects.dungeon.archive}</span>
+          <span>{projects.common.desktopApplication}</span>
+        </div>
+
+        <article className="dstime-project-layout">
+          <div className="project-info">
+            <div className="project-index">
+              <span>03</span>
+              <span>{projects.dungeon.type}</span>
+            </div>
+            <h2>{projects.dungeon.title}</h2>
+            <p className="project-tagline">{projects.dungeon.tagline}</p>
+            <p className="project-description">{projects.dungeon.description}</p>
+            <div className="project-stack">
+              <span>REACT</span><span>TYPESCRIPT</span><span>THREE.JS</span><span>VITE</span>
+            </div>
+            <div className="project-actions">
+              <Link to="/projects/decision-dungeon" className="project-primary">
+                {projects.common.viewProject}<span>↗</span>
+              </Link>
+              <a href="https://edgardovillalba.is-a.dev/decision-dungeon/" target="_blank" rel="noopener noreferrer" className="project-secondary">
+                {projects.dungeon.liveDemo}
+              </a>
+              <a href="https://github.com/Linth84/decision-dungeon" target="_blank" rel="noopener noreferrer" className="project-secondary">GITHUB</a>
+            </div>
+          </div>
+
+          <DungeonDisplay
+            feed={projects.dungeon.feed}
+            online={projects.common.online}
+            src="/videos/decision-dungeon/decision-dungeon.webm"
+          />
+        </article>
+      </div>
+
+      {/* =====================================================
+          PROJECT 04 // FIP / PIF TRACKER
           ===================================================== */}
 
       <div className="project-section mobile-project project-fip">
@@ -172,7 +213,7 @@ export default function Projects() {
         <article className="mobile-project-layout">
           <div className="project-info">
             <div className="project-index">
-              <span>03</span>
+              <span>04</span>
               <span>{projects.fip.type}</span>
             </div>
 
@@ -237,7 +278,7 @@ export default function Projects() {
       </div>
 
       {/* =====================================================
-          PROJECT 04 // SOOTHEWAVEAPP
+          PROJECT 05 // SOOTHEWAVEAPP
           ===================================================== */}
 
       <div className="project-section mobile-project project-soothe">
@@ -249,7 +290,7 @@ export default function Projects() {
         <article className="mobile-project-layout mobile-project-reverse">
           <div className="project-info">
             <div className="project-index">
-              <span>04</span>
+              <span>05</span>
               <span>{projects.soothe.type}</span>
             </div>
 
@@ -292,7 +333,7 @@ export default function Projects() {
           </div>
 
           <PhoneDisplay
-            number="03"
+            number="05"
             system={projects.soothe.system}
             mobileSystemOnline={projects.phone.mobileSystemOnline}
             src="/videos/soothewave/soothewave-demo.webm"
@@ -363,6 +404,28 @@ function DesktopDisplay({ number, feed, online, src }: DesktopDisplayProps) {
         </div>
         <div className="dstime-screen"><video src={src} autoPlay muted loop playsInline preload="metadata" /></div>
         <div className="dstime-browser-footer"><span>SYS // DST-02</span><span>{online}</span></div>
+      </div>
+    </div>
+  )
+}
+
+
+/* =========================================================
+   DECISION DUNGEON DISPLAY
+   ========================================================= */
+
+function DungeonDisplay({ feed, online, src }: { feed: string; online: string; src: string }) {
+  return (
+    <div className="dstime-system dungeon-system">
+      <div className="dstime-telemetry"><span>WEB APP // 03</span><span>{feed}</span></div>
+      <div className="dstime-glow" />
+      <div className="dstime-browser">
+        <div className="dstime-browser-bar">
+          <div className="dstime-browser-dots" aria-hidden="true"><span /><span /><span /></div>
+          <span>edgardovillalba.is-a.dev/decision-dungeon/</span><span>LIVE</span>
+        </div>
+        <div className="dstime-screen"><video src={src} autoPlay muted loop playsInline preload="metadata" /></div>
+        <div className="dstime-browser-footer"><span>SYS // DD-03</span><span>{online}</span></div>
       </div>
     </div>
   )
