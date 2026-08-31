@@ -20,6 +20,7 @@ import PifTrackerCaseStudy from './pages/PifTrackerCaseStudy'
 import SootheWaveCaseStudy from './pages/SootheWaveCaseStudy'
 import DSTimeCaseStudy from './pages/DSTimeCaseStudy'
 import DecisionDungeonCaseStudy from './pages/DecisionDungeonCaseStudy'
+import CampaignChroniclesCaseStudy from './pages/CampaignChroniclesCaseStudy'
 import { useLanguage } from './i18n/LanguageContext'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -235,6 +236,45 @@ function Home() {
       gsap.from('.project-dungeon .projects-heading', { opacity: 0, y: 38, scrollTrigger: { trigger: '.project-dungeon', start: 'top 88%', end: 'top 68%', scrub: 1 } })
       gsap.from('.project-dungeon .project-info', { opacity: 0, x: -95, scrollTrigger: { trigger: '.project-dungeon', start: 'top 82%', end: 'top 54%', scrub: 1 } })
       gsap.from('.project-dungeon .dungeon-system', { opacity: 0, x: 110, y: 30, scale: 0.94, scrollTrigger: { trigger: '.project-dungeon', start: 'top 82%', end: 'top 48%', scrub: 1 } })
+
+      /* =========================
+         CAMPAIGN CHRONICLES
+         ========================= */
+
+      gsap.from('.project-campaign .projects-heading', {
+        opacity: 0,
+        y: 38,
+        scrollTrigger: {
+          trigger: '.project-campaign',
+          start: 'top 88%',
+          end: 'top 68%',
+          scrub: 1,
+        },
+      })
+
+      gsap.from('.project-campaign .project-info', {
+        opacity: 0,
+        x: 95,
+        scrollTrigger: {
+          trigger: '.project-campaign',
+          start: 'top 82%',
+          end: 'top 54%',
+          scrub: 1,
+        },
+      })
+
+      gsap.from('.project-campaign .campaign-system', {
+        opacity: 0,
+        x: -110,
+        y: 30,
+        scale: 0.94,
+        scrollTrigger: {
+          trigger: '.project-campaign',
+          start: 'top 82%',
+          end: 'top 48%',
+          scrub: 1,
+        },
+      })
 
       /* =========================
          FIP TRACKER
@@ -475,6 +515,18 @@ function SeoSync() {
           description: 'Caso de estudio de Decision Dungeon, un decisor interactivo de fantasía con D20 3D animado real, interfaz bilingüe, audio y modo Best of 3.',
         },
       },
+      '/projects/campaign-chronicles': {
+        en: {
+          title: 'Campaign Chronicles | Edgardo Villalba',
+          description:
+            'Case study of Campaign Chronicles, a bilingual narrative workspace for organizing TTRPG campaigns, characters, NPCs, places, sessions, factions, relationships and campaign knowledge.',
+        },
+        es: {
+          title: 'Campaign Chronicles | Edgardo Villalba',
+          description:
+            'Caso de estudio de Campaign Chronicles, un workspace narrativo bilingüe para organizar campañas de rol, personajes, NPCs, lugares, sesiones, facciones, relaciones y conocimiento de campaña.',
+        },
+      },
       '/projects/pif-tracker': {
         en: {
           title: 'PIF Tracker | Edgardo Villalba',
@@ -580,6 +632,11 @@ function AppRoutes() {
         <Route
           path="/projects/decision-dungeon"
           element={<DecisionDungeonCaseStudy />}
+        />
+
+        <Route
+          path="/projects/campaign-chronicles"
+          element={<CampaignChroniclesCaseStudy />}
         />
 
         <Route

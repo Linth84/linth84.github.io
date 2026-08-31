@@ -131,8 +131,20 @@ export const translations = {
         liveDemo: 'LIVE DEMO',
       },
 
-      fip: {
+      campaign: {
         archive: 'PROJECT ARCHIVE // 04',
+        type: 'WEB APP / TTRPG WORKSPACE',
+        title: 'Campaign Chronicles',
+        tagline: 'The memory of your campaign.',
+        description:
+          'A bilingual narrative workspace for organizing TTRPG campaigns, characters, NPCs, places, sessions, factions, relationships and the knowledge that grows as a story unfolds.',
+        feed: 'CAMPAIGN CHRONICLES // LIVE DEMO',
+        openApp: 'OPEN APP',
+        watchDemo: 'WATCH DEMO',
+      },
+
+      fip: {
+        archive: 'PROJECT ARCHIVE // 05',
         type: 'WEB + ANDROID / FIP TRACKING',
         platform: 'WEB + ANDROID APPLICATION',
         title: 'FIP Tracker',
@@ -143,7 +155,7 @@ export const translations = {
       },
 
       soothe: {
-        archive: 'PROJECT ARCHIVE // 05',
+        archive: 'PROJECT ARCHIVE // 06',
         type: 'MOBILE / WELLNESS',
         title: 'SootheWaveApp',
         tagline: 'A calmer digital space.',
@@ -794,8 +806,20 @@ export const translations = {
         liveDemo: 'DEMO EN VIVO',
       },
 
-      fip: {
+      campaign: {
         archive: 'ARCHIVO DE PROYECTO // 04',
+        type: 'WEB APP / WORKSPACE TTRPG',
+        title: 'Campaign Chronicles',
+        tagline: 'La memoria de tu campaña.',
+        description:
+          'Un workspace narrativo bilingüe para organizar campañas de rol, personajes, NPCs, lugares, sesiones, facciones, relaciones y todo el conocimiento que crece mientras avanza la historia.',
+        feed: 'CAMPAIGN CHRONICLES // DEMO EN VIVO',
+        openApp: 'ABRIR APP',
+        watchDemo: 'VER DEMO',
+      },
+
+      fip: {
+        archive: 'ARCHIVO DE PROYECTO // 05',
         type: 'WEB + ANDROID / SEGUIMIENTO PIF',
         platform: 'APLICACIÓN WEB + ANDROID',
         title: 'PIF Tracker',
@@ -806,7 +830,7 @@ export const translations = {
       },
 
       soothe: {
-        archive: 'ARCHIVO DE PROYECTO // 05',
+        archive: 'ARCHIVO DE PROYECTO // 06',
         type: 'MÓVIL / BIENESTAR',
         title: 'SootheWaveApp',
         tagline: 'Un espacio digital más tranquilo.',

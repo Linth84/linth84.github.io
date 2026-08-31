@@ -1,0 +1,136 @@
+/* =========================================================
+   VIDEO SHOWCASE
+   Uses the same desktop convergence geometry as the project
+   rows: copy starts at the left edge, player at the right.
+   ========================================================= */
+
+.video-showcase {
+  padding-top: 80px;
+}
+
+.video-showcase-layout {
+  display: grid;
+  grid-template-columns: minmax(320px, .75fr) minmax(520px, 1.25fr);
+  align-items: center;
+  gap: clamp(60px, 8vw, 130px);
+  min-height: 700px;
+}
+
+.video-showcase-copy {
+  position: relative;
+  z-index: 2;
+  max-width: 520px;
+}
+
+.video-showcase-copy h2 {
+  margin: 0;
+  color: #f3f7fa;
+  font-size: clamp(54px, 6vw, 100px);
+  line-height: .95;
+  letter-spacing: -.06em;
+  text-shadow: 0 0 35px rgba(60, 170, 255, .08);
+}
+
+.video-showcase-player {
+  position: relative;
+  min-width: 0;
+}
+
+/*
+  This is the important part:
+  the existing portfolio animation targets the same left/right
+  project columns. These transforms provide the same converging
+  entrance without changing Projects/App animation logic.
+*/
+@media (min-width: 1101px) {
+  .video-showcase-copy {
+    animation: video-showcase-copy-in 1s cubic-bezier(.22, 1, .36, 1) both;
+    animation-timeline: view();
+    animation-range: entry 5% cover 35%;
+  }
+
+  .video-showcase-player {
+    animation: video-showcase-player-in 1s cubic-bezier(.22, 1, .36, 1) both;
+    animation-timeline: view();
+    animation-range: entry 5% cover 35%;
+  }
+
+  @keyframes video-showcase-copy-in {
+    from {
+      opacity: .15;
+      transform: translateX(-18vw);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes video-showcase-player-in {
+    from {
+      opacity: .15;
+      transform: translateX(18vw);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
+.video-showcase-screen {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 1px solid rgba(105, 216, 255, .1);
+  background: #020407;
+}
+
+.video-showcase-screen iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (max-width: 1100px) {
+  .video-showcase-layout {
+    grid-template-columns: 1fr;
+    gap: 60px;
+    min-height: auto;
+  }
+
+  .video-showcase-copy {
+    max-width: 700px;
+  }
+
+  .video-showcase-player {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .video-showcase {
+    padding-top: 30px;
+  }
+
+  .video-showcase-layout {
+    gap: 45px;
+  }
+
+  .video-showcase-copy h2 {
+    font-size: clamp(48px, 16vw, 72px);
+  }
+
+  .video-showcase-screen {
+    aspect-ratio: 16 / 10;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .video-showcase-copy,
+  .video-showcase-player {
+    animation: none;
+  }
+}

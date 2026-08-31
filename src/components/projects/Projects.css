@@ -1031,3 +1031,37 @@
 .dstime-screen video { display:block; width:100%; height:100%; object-fit:cover; object-position:center; }
 @media (max-width:1100px) { .dstime-project-layout { grid-template-columns:1fr; gap:60px; min-height:auto; } .dstime-system { order:2; } .project-dstime .project-info { order:1; max-width:700px; } }
 @media (max-width:600px) { .project-dstime { padding-top:30px; } .dstime-project-layout { gap:45px; } .dstime-browser { padding:7px; } .dstime-browser-bar > span:nth-child(2) { display:none; } .dstime-browser-bar { grid-template-columns:1fr auto; } .dstime-screen { aspect-ratio:16/10; } }
+
+/* =========================================================
+   CAMPAIGN CHRONICLES // PROJECT 04
+   ========================================================= */
+
+.project-campaign {
+  padding-top: 80px;
+}
+
+.campaign-screen {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 1px solid rgba(105, 216, 255, 0.1);
+  background: #020407;
+}
+
+.campaign-screen iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (max-width: 600px) {
+  .project-campaign {
+    padding-top: 30px;
+  }
+
+  .campaign-screen {
+    aspect-ratio: 16 / 10;
+  }
+}

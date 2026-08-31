@@ -25,6 +25,11 @@ const pages = [
     description: 'Case study of Decision Dungeon, an interactive fantasy decision maker with a real animated 3D D20, bilingual UI, audio and Best of 3 mode.',
   },
   {
+    route: '/projects/campaign-chronicles',
+    title: 'Campaign Chronicles | Edgardo Villalba',
+    description: 'Case study of Campaign Chronicles, a bilingual narrative workspace for organizing TTRPG campaigns, characters, NPCs, places, sessions, factions and relationships.',
+  },
+  {
     route: '/projects/pif-tracker',
     title: 'PIF Tracker | Edgardo Villalba',
     description: 'Case study of PIF Tracker, a Web and Android app for organizing daily FIP treatment tracking, weight, wellness and the 84 + 84 journey.',

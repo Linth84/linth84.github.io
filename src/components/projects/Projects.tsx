@@ -201,7 +201,70 @@ export default function Projects() {
       </div>
 
       {/* =====================================================
-          PROJECT 04 // FIP / PIF TRACKER
+          PROJECT 04 // CAMPAIGN CHRONICLES
+          ===================================================== */}
+
+      <div className="project-section project-campaign">
+        <div className="projects-heading">
+          <span>{projects.campaign.archive}</span>
+          <span>{projects.common.desktopApplication}</span>
+        </div>
+
+        <article className="dstime-project-layout">
+          <CampaignDisplay
+            language={language}
+            feed={projects.campaign.feed}
+            online={projects.common.online}
+          />
+
+          <div className="project-info">
+            <div className="project-index">
+              <span>04</span>
+              <span>{projects.campaign.type}</span>
+            </div>
+
+            <h2>{projects.campaign.title}</h2>
+            <p className="project-tagline">{projects.campaign.tagline}</p>
+            <p className="project-description">{projects.campaign.description}</p>
+
+            <div className="project-stack">
+              <span>REACT</span>
+              <span>TYPESCRIPT</span>
+              <span>VITE</span>
+              <span>SUPABASE</span>
+            </div>
+
+            <div className="project-actions">
+              <Link to="/projects/campaign-chronicles" className="project-primary">
+                {projects.common.viewProject}<span>↗</span>
+              </Link>
+
+              <a
+                href="https://campaign-chronicles.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-secondary"
+              >
+                {projects.campaign.openApp}
+              </a>
+
+              <a
+                href={language === 'es'
+                  ? 'https://www.youtube.com/watch?v=m9YQC_ELuc8'
+                  : 'https://www.youtube.com/watch?v=CTsnpz_F7hI'}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-secondary"
+              >
+                {projects.campaign.watchDemo}
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      {/* =====================================================
+          PROJECT 05 // FIP / PIF TRACKER
           ===================================================== */}
 
       <div className="project-section mobile-project project-fip">
@@ -213,7 +276,7 @@ export default function Projects() {
         <article className="mobile-project-layout">
           <div className="project-info">
             <div className="project-index">
-              <span>04</span>
+              <span>05</span>
               <span>{projects.fip.type}</span>
             </div>
 
@@ -268,7 +331,7 @@ export default function Projects() {
           </div>
 
           <PhoneDisplay
-            number="04"
+            number="05"
             system={projects.fip.system}
             mobileSystemOnline={projects.phone.mobileSystemOnline}
             src="/videos/pif-tracker/pif-tracker-demo.webm"
@@ -278,7 +341,7 @@ export default function Projects() {
       </div>
 
       {/* =====================================================
-          PROJECT 05 // SOOTHEWAVEAPP
+          PROJECT 06 // SOOTHEWAVEAPP
           ===================================================== */}
 
       <div className="project-section mobile-project project-soothe">
@@ -290,7 +353,7 @@ export default function Projects() {
         <article className="mobile-project-layout mobile-project-reverse">
           <div className="project-info">
             <div className="project-index">
-              <span>05</span>
+              <span>06</span>
               <span>{projects.soothe.type}</span>
             </div>
 
@@ -333,7 +396,7 @@ export default function Projects() {
           </div>
 
           <PhoneDisplay
-            number="05"
+            number="06"
             system={projects.soothe.system}
             mobileSystemOnline={projects.phone.mobileSystemOnline}
             src="/videos/soothewave/soothewave-demo.webm"
@@ -426,6 +489,61 @@ function DungeonDisplay({ feed, online, src }: { feed: string; online: string; s
         </div>
         <div className="dstime-screen"><video src={src} autoPlay muted loop playsInline preload="metadata" /></div>
         <div className="dstime-browser-footer"><span>SYS // DD-03</span><span>{online}</span></div>
+      </div>
+    </div>
+  )
+}
+
+
+/* =========================================================
+   CAMPAIGN CHRONICLES DISPLAY
+   ========================================================= */
+
+function CampaignDisplay({
+  language,
+  feed,
+  online,
+}: {
+  language: 'es' | 'en'
+  feed: string
+  online: string
+}) {
+  const videoId = language === 'es' ? 'm9YQC_ELuc8' : 'CTsnpz_F7hI'
+
+  return (
+    <div className="dstime-system campaign-system">
+      <div className="dstime-telemetry">
+        <span>WEB APP // 04</span>
+        <span>{feed}</span>
+      </div>
+
+      <div className="dstime-glow" />
+
+      <div className="dstime-browser">
+        <div className="dstime-browser-bar">
+          <div className="dstime-browser-dots" aria-hidden="true">
+            <span /><span /><span />
+          </div>
+          <span>campaign-chronicles.com</span>
+          <span>LIVE</span>
+        </div>
+
+        <div className="campaign-screen">
+          <iframe
+            key={videoId}
+            src={`https://www.youtube-nocookie.com/embed/${videoId}?rel=0`}
+            title={language === 'es' ? 'Campaign Chronicles — Demo en español' : 'Campaign Chronicles — English demo'}
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          />
+        </div>
+
+        <div className="dstime-browser-footer">
+          <span>SYS // CC-04</span>
+          <span>{online}</span>
+        </div>
       </div>
     </div>
   )
